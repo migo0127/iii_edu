@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hank-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/afb573b2ac.js" crossorigin="anonymous"></script>
+        <title>Homework</title>
+        <style>
+
+            @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap");
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+
+            body{
+                width: 100%;
+                height: 100%;                
+                background:linear-gradient(310deg,#7bf 50%,transparent 50%) no-repeat;
+            }
+
+            .container {
+                width: 1080px;
+                border: 1px solid blue;
+                margin: 100px auto;
+                position: relative;
+                font-family: "Noto Serif TC", sans-serif;
+            }
+
+            .container::before {
+                content: "";
+                display: block;
+                width: 250px;
+                height: 150px;
+                background-image: url("./img/01/首席印章.png");
+                background-size: 100%;
+                position: absolute;
+                top: -76px;
+                left: -120px;
+                transform: rotateZ(-30deg);
+                z-index: -1;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 40px 0px;
+            }
+
+            h1::after {
+                content: "";
+                display: block;
+                width: 415px;
+                height: 25px;
+                background-color: skyblue;
+                position: absolute;
+                top: 65px;
+                right: 50%;
+                margin-right: -225px;
+                z-index: -1;
+            }
+
+            .pic-wrap {
+                width: 390px;
+                margin: 0 20px 20px 20px;
+                float: left;
+            }
+
+            figcaption {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            figcaption>i {
+                font-size: 16px;
+            }
+
+            .txt {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                box-sizing: border-box;
+            }
+
+            h2 {
+                margin: 15px 0px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+                padding-bottom: 12px;
+                text-indent: 32px;                
+                text-align: justify;
+            }
+
+            .txt .music {
+                width: 70%;
+                background-color: #fff;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+
+            iframe {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+
+            audio {
+                width: 100%;
+            }
+
+            audio:focus {
+                outline: none;
+            }
+
+            .top-wrap{
+                width: 50px;
+                height: 50px;
+                border: black 1px solid;
+            }
+        </style>
+
+        <script>
+            doucment.createElement("figure");
+            doucment.createElement("figcaption");
+        </script>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div id="top" class="container">
+                <h1>《聲入人心》我用聲音追著光</h1>
+                <div class="pic-wrap">
+                    <figure>
+                        <a href="https://www.youtube.com/watch?v=uJ86FnrB4lo" target="_block">
+                            <img src="./img/01/Super_–_Vocal_.png" title="声入人心第一季" alt="声入人心第一季">
+                        </a>
+                        <figcaption>
+                            <i class="fas fa-caret-up"></i>
+                            出品人劉憲華、廖昌永、尚雯婕
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="txt">
+                    <h2>道阻且長，行則將至</h2>
+                    <p>《聲入人心》是由湖南衛視製作的原創新形態聲樂演唱節目，其初衷是希望透過推廣美聲，消除大家對高雅音樂的誤解。一直以來在亞洲，美聲是一種相對小眾的藝術，曲高和寡，怎麼被主流審美接受？《聲入人心》開播時，面臨的便是這樣的質疑。但這個被眾多粉絲認證「窮」，連贊助商贊助的手機在結束後都要歸還的節目，偕同36位演唱成員，一路在外界的不看好裡殺出重圍，第一季節目斬獲豆瓣評分9.3，節目結束後的巡演門票開售即被搶購一空，節目更被授權到北美地區播放。
+                    </p>
+                    <p>節目由3位出品人廖昌永、劉憲華、尚雯婕領軍，在長沙梅溪湖國際文化藝術中心進行100天密集訓練、演出，不斷更換搭檔與演唱曲目，於「首席」和「替補」兩個角色間進行激烈的競爭；自節目10輪公演中，評選出10次前六名首席，不管是獨唱、二重唱、三重唱甚至四重唱，成員們需要在每一次演出中全力以赴，角逐最終的6個首席之位。
+                    </p>
+
+                    <h2>「三高」成員，有如神仙打架</h2>
+                    <p>《聲入人心》的成員來自海內外各大音樂機構，儘管背景各異，但他們的共通點可以被簡稱為「三高」：高學歷、高顏值、高音樂素養。成員中不乏高學歷的「大神」，像是以全A成績畢業自美國茱莉亞音樂學院的賈凡、畢業於耶魯大學並在該校任教的洪之光等人。而高音樂素養更是有目共睹，曾獲第41屆義大利貝里尼國際聲樂大賽金獎的男高音王凱、榮獲美國聖荷西國際聲樂大賽一等獎的假聲男高音高天鶴，成員們獲得的榮譽繁不及載。
+                    </p>
+                    <p>當然，外貌條件也是許多觀眾關注的重點。他們俊俏清秀的外型加上182公分的平均身高，讓節目一開播便得到許多女粉絲特別關注。成員之一的音樂劇演員鄭雲龍外型俊俏，被粉絲封為「音樂劇王子」；成員李向哲是偶像團體COSMOS的團員，扮演起手機遊戲中的帥氣總裁毫無違和。這樣的黃金陣容，讓《聲入人心》在眾多音樂偶像養成節目裡異軍突起，吸引了許多好奇的觀眾。
+                    </p>
+
+                    <h2>跨域交流，梅溪湖36子亦師亦友</h2>
+                    <p>節目裡公演的選曲包括傳統歌劇、歐美與華語音樂劇、電影主題曲，包含經典音樂劇《歌劇魅影》、《伊莉莎白》、《吉屋出租》中的選段，電影主題曲《Can you feel the love
+                        tonight》、《鹿be free》，以及流行美聲歌曲《La Vita》、《Grande
+                        Amore》等，橫跨古典與現代。且成員的音域涵蓋男高音、男中音、男低音與假聲男高音，不同聲音特色與演唱風格的變換組合，讓觀眾在每一期都能享受愉快的音樂盛宴。</p>
+
+                    <iframe src="//player.bilibili.com/player.html?aid=39353095&cid=69153564&page=1" scrolling="no"
+                        frameborder="no" framespacing="0" allowfullscreen="true" width="700" height="550"> </iframe>
+
+                    <p>許多觀眾早已厭倦中國音樂綜藝競演節目的公式：來賓間的衝突與暗潮洶湧、被剪輯刻意放大的不和片段，但《聲入人心》反其道而行。賽制沒有淘汰機制，加上經常需要組隊合唱，讓節目煙硝味少了許多。成員間彼此經常互相幫助，切磋技藝，資歷豐富的老將不吝指點青澀的在學學生，而年輕的成員也為他們口中的「哥哥」們帶來新的靈感與氣象。
+                    </p>
+
+                    <div class="music">
+                        <audio controls title="蔡程昱&马佳 - Grande Amore ">
+                            <source src="./source/蔡程昱_马佳 - Grande Amore (旷世之爱).mp3" />
+                            <source src="./source/蔡程昱_马佳 - Grande Amore (旷世之爱).ogg" />
+                            <embed src="./source/蔡程昱_马佳 - Grande Amore (旷世之爱).mp3" type="audio/mp3" width="700" height="35" autostart="false" />
+                        </audio>
+                    </div>
+
+                    <p>像是男低音王晰在節目第三期時，跟高楊合唱韓國音樂劇《洗衣服》中的《她真漂亮》，敘述男孩向心儀已久的對象表白時的忐忑與甜蜜。王晰在節目中一次次指導僅20出頭的高楊，設身處地代入男主角的心境，「這是一首對自己喜歡的女孩子表達愛的歌，你要把你的情緒給到我。」最後呈現的成果也十分驚豔，高楊的高音澄澈、王晰的低音渾厚，緩緩互訴愛情的美好，相輔相成，獲代理出品人石倚潔高度讚賞「王晰高楊兩個人是絕配。」播出後，眾多女性網友更驚呼「有戀愛的感覺！」、「我又心動了！」足見兩人演出的成功。
+                    </p>
+                    <p>而100天的相處陪伴下，成員之間亦培養出深厚感情。在節目收官後，他們不捨這趟音樂之旅的結束，自主製作了一首歌曲<a
+                            href="https://www.youtube.com/watch?v=QHiwaYJjynw"
+                            target="_block">《不說再見》</a>，由成員簡弘亦譜曲，邀請出品人廖昌永與他們共同合唱，用歌聲紀念彼此的情誼。成員馬佳還在微博上寫下「註定今生我們36人成為兄弟，相認在梅溪湖。」兄弟情深，著實觸動人心。
+                    </p>
+
+                    <img src="./img/01/声入人心 - 5.jpg" alt="梅溪湖36子" title="梅溪湖36子">
+
+                    <h2>十年飲冰，難涼熱血</h2>
+                    <p>《聲入人心》能夠大獲成功的關鍵，是契合了觀眾的情感需求：對藝術的追求，對夢想的堅持不懈，對純粹美感的追尋。成員高天鶴在節目中與出品人聊天時，坦言美聲專業的辛酸「它的職業環是閉的，閉環。就是『學成當老師、教學生、學成當老師』這樣一個閉環」選擇十分受限。如果想要站上舞台，不爬到行業金字塔頂端就是痴人說夢；但能夠站上舞台的人，往往已經閱盡千帆，青春不再。而長期在底層掙扎的大多數人，面對沒有聚光燈、沒有聽眾的失落，和沒有穩定經濟來源的壓力，更是猶如庸庸碌碌的螻蟻。
+                    </p>
+                    <p>但就是有一群追夢的傻子，在如此難行的路上仍在大步向前。鄭雲龍與阿雲嘎即使已貴為中國音樂劇一線演員，拿到的薪酬一場演出僅1500元人民幣，對比一般百老匯主演平均一場演出4000美元的水準相比，實在相形見絀。但不管再辛苦，他們從未想過要放棄舞台。鄭雲龍在最後一期錄製時眼眶泛紅，道出真心話「輸贏根本不重要，最重要的是，我們堅持這麼多年的東西終於被人看見了。」他們能在今日綻放出耀眼的光芒，除了實力，最可貴的是過去默默付出的汗水與努力。
+                    </p>
+
+                    <figure>
+                        <img src="./img/01/1.jpeg" alt="音樂劇演員鄭雲龍、阿云嘎">
+                        <figcaption>
+                            <i class="fas fa-caret-up"></i>
+                            音樂劇演員鄭雲龍(左)、阿雲嘎(右)
+                        </figcaption>
+
+                    </figure>
+
+                    <h2>讓小眾藝術也能夠迎接春天</h2>
+                    <p>傳統藝術並非過時，又一無可取，需要去其糟粕，取其精華，用現代的改良方式為輔助，讓更多人去了解，進而消除偏見。美聲不是高不可攀、陽春白雪的藝術，它可以很親切，融入你的日常生活：今天周末有空，走進劇場看個音樂劇、聽個歌劇。如果有興趣，主動去深入學習，甚至以此為志業──這便是《聲入人心》最終極的目標。
+                    </p>
+
+                    <figure>
+                        <img src="./img/01/2.jpg" alt="声入人心">
+                        <figcaption>
+                            <i class="fas fa-caret-up"></i>
+                            未來的路仍很長，這群藝術家依然繼續在熱愛的音樂路上，繼續用聲音追著光。
+                        </figcaption>
+                    </figure>                    
+                </div>
+            </div>
+            <div class="top-wrap">
+                <a href="#id">
+                    <img src="./img/01/TOP.jpg" alt="回到頂部">
+                </a>
+            </div>
+        </div>
+    </body>
+
+</html>

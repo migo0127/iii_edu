@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單Form</title>
+    <style>
+
+        /* @font-face{
+            src:url("fonts/SCRIPALT.ttf");
+            font-family:"SCRIPALT";
+        }
+
+        @font-face{
+            src:url("fonts/JustOldFashion.ttf");
+            font-family:"JustOldFashion";
+        }
+
+        @font-face{
+            src:url("fonts/SCRIPTIN.ttf");
+            font-family:"SCRIPTIN";
+        } */
+
+        /* @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap"); */
+
+        form {
+            width: 600px;
+            /* margin: 0 auto; */
+            font-size: 16px;
+            font-family:"Noto Serif TC", "微軟正黑體", SCRIPTIN , JustOldFashion , SCRIPALT ,"Source Sans Pro", Helvetica, sans-serif;
+            color: #00f;
+            font-weight: 600;
+        }
+
+        fieldset {
+            width: 480px;
+            margin: 20px;
+            background-color:#ffb;
+            border: 2px dotted #7bf;
+            border-radius: 15px;
+        }
+
+        legend {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .st1 {
+            width: 450px;
+            border-bottom: solid 1px #aaa;
+            margin: 10px;
+            padding-bottom: 10px;
+        }
+
+        .st2 {
+            width: 380px;
+            margin-top: 10px;
+        }
+
+        .sub {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .lab {
+            width: 100px;
+            /* background-color: #bfa; */
+            float: left;
+            text-align: center;
+            margin-top: 3px;
+            /* display: inline-block; */
+            /* text-align:right;
+            vertical-align: top; */
+        }
+
+        input {
+            padding: 0 2px;
+        }
+
+
+        legend>span {
+            color: red;
+        }
+
+        .star::before {
+            content: "*";
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="get" enctype="multipart/form-data" autocomplete="off">
+        <fieldset>
+            <legend>個人資料：<span>必填</span></legend>
+            <div class="st1">
+                <label class="lab" for="acc">帳號：</label>
+                <input type="text" required id="acc" name="account" placeholder="guest" size="20" autofocus maxlength="10">
+            </div>
+            <div class="st1">
+                <label class="lab" for="pasw">密碼：</label>
+                <input type="password" required id="pasw" name="pwd" maxlength="8" size="20" placeholder="請輸入8位數">
+            </div>
+            <div class="st1">
+                <label class="lab" for="id">身分證：</label>
+                <input type="text" required id="id" name="idcode" maxlength="10" pattern="[a-zA-Z]{1}[1-2]{1}\d{8}" size="20">
+            </div>
+            <div class="st1">
+                <label class="lab" for="day">生日：</label>
+                <input type="date" required id="day" name="brithday" size="20">
+            </div>
+            <div class="st1">
+                <label class="lab" for="telp">手機：</label>
+                <input type="tel" required id="telp" name="telphone" maxlength="10" pattern="[0][9]\d{8}" size="20">
+            </div>
+            <div class="st1">
+                <label class="lab" for="mail">E-mail：</label>
+                <input type="email" required id="mail" name="email" maxlength="50" size="30">
+            </div>
+            <div class="st1">
+                <label class="lab">性別：</label>
+                <label>
+                    <input type="radio" required name="gender" value="male">男
+                </label>
+                <label>
+                    <input type="radio" required name="gender" value="female">女
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>住址：<span>*必填</span></legend>
+            <div class="st1">
+                <label class="lab">興趣：</label>
+                <label>
+                    <input type="checkbox" name="interest" value="music">音樂
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="redaing">閱讀
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="basketball">籃球
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="computer">電腦
+                </label>
+            </div>
+            <div class="st1">
+                <label class="lab">專長：</label>
+                <label>
+                    <input type="checkbox" name="specialty" value="chiness">中文
+                </label>
+                <label>
+                    <input type="checkbox" name="specialty" value="english">英文
+                </label>
+                <label>
+                    <input type="checkbox" name="specialty" value="japaness">日文
+                </label>
+                <label>
+                    <input type="checkbox" name="specialty" value="German">德文
+                </label>
+            </div>
+            <div class="st1">
+                <div class="st2">
+                    <label class="lab star">郵遞區號：</label>
+                    <input required type="text" name="addares" size="5" maxlength="5" pattern="/d{5}" placeholder="請輸入5位">
+                </div>
+                <div class="st2">
+                    <label class="lab star">縣市：</label>
+                    <select name="city" >
+                        <option value="Preset" selected>預設</option>
+                        <option value="taipei">台北市</option>
+                        <option value="Taichung">台中市</option>
+                        <option value="Taoyuan">桃園市</option>
+                        <option value="kinmen">金門縣</option>
+                    </select>
+                </div>
+                <div class="st2">
+                    <label class="lab star">地址：</label>
+                    <input type="text" required name="address" size="30">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>作品集：<span>*必填</span></legend>
+            <div class="st1">
+                <label class="lab">照片：</label>
+                <label>
+                    <input type="file" name="photo">
+                </label>
+            </div>
+            <div class="st1">
+                <div class="st2">
+                    <label class="lab star">作品：</label>
+                    <label>
+                        <input required multiple type="file" name="document">
+                    </label>
+                </div>
+                <div class="st2">
+                    <label class="lab">Url：</label>
+                    <label>
+                        <input type="url" name="rul1" value="http://">
+                    </label>
+                </div>
+            </div>
+            <div class="st1">
+                <label class="lab">Blog：</label>
+                <input type="url" name="bhmoe" list="bh" value="http://">
+                <datalist id="bh">
+                    <option value="http://www.facebook.com">Facebook</option>  
+                    <option value="http://www.pchome.com.tw">Pchome</option>  
+                    <option value="http://www.wibo.com">微博</option>  
+                </datalist>
+                
+            </div>
+            <div class="st1">
+                <label class="lab" for="sug">意見：</label>
+                <textarea name="suggest" id="sug" cols="30" rows="10"></textarea>
+            </div>
+            <div class="sub">
+                <input type="submit" name="btn" value="提交">
+                <button type="reset" name="btn">重置</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
