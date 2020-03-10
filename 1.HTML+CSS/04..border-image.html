@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-image</title>
+    <style>
+
+        .box1{
+            height: 300px;
+            border: 20px solid transparent;
+            border-image: url(img/border-image2.png) 20 round;
+        }
+
+        .box2{
+            height: 300px;
+            border: 20px solid transparent;
+            border-image: url(img/border-image2.png) 20 stretch;
+        }
+
+        .box3{
+            height: 300px;
+            border: 20px solid transparent;
+            border-image: url(img/border-image2.png) 20 repeat;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

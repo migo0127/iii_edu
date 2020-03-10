@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+    <style>
+
+        .box{
+            width: 640px;
+            height: 563px;
+            background: url("img/25.png") left center no-repeat , url("img/7.png") right center no-repeat ,url("img/map.png");
+            transition: 0.5s;
+        }
+
+        .box:hover{
+            background: url("img/25.png") right center no-repeat , url("img/7.png") left center no-repeat ,url("img/map.png");
+            background-size: 100px auto,350px auto,auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

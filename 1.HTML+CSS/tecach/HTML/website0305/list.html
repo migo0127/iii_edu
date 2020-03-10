@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清單元素</title>
+    <style>
+        .list {
+            list-style-type:upper-roman;
+            background-color:yellow;
+            border:3px dashed green;
+            width:500px;
+            /* border-top-left-radius:20px;
+            border-bottom-right-radius:20px; */
+            border-radius:5px 20px;
+
+        }
+        .list1 {
+            list-style-type:none;
+            list-style-image:url(images/arrow1.png);
+        }
+        .list2 {
+            list-style-type:none;
+            list-style-image:url(images/arrow2.png);
+        }
+        .in {
+            background-color:darkseagreen;
+            list-style-position:inside;
+        }
+        .out {
+            background-color:darkseagreen;
+            list-style-position:outside;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.pchome.com.tw">PChome</a>
+    <a href="first.html">First</a>
+    <a href="hyperlink.html#book1">Link</a>
+    
+    <a href="mailto:chiyihsin@gamil.com">mail to me</a>
+    <hr>
+    <h2>新聞</h2>
+    <ul class="list">
+        <li style="background-color:orange;border-top-right-radius:20px">財經
+            <ul class="list1">
+                <li class="in">股市匯市</li>
+                <li>理財就業</li>
+                <li class="out">產業動態</li>
+            </ul>
+        </li>
+        <li>運動
+            <ol class="list2">
+                <li>籃球</li>
+                <li>棒球</li>
+                <li>網球</li>
+            </ol>
+        </li>
+        <li>生活</li>
+        <li>健康</li>
+    </ul>
+    <ol>
+        <li>就業養成班
+            <ol>
+                <li>網路系統工程師班</li>
+            </ol>
+        </li>
+        <li>軟體設計精修班</li>
+        <li></li>
+    </ol>
+    <h2>
+        台灣藍鵲
+    </h2>
+    <dl>
+        <dt>學名:</dt>
+        <dd>Urocissa caerulea</dd>
+        <dt>俗名:</dt>
+        <dd>又稱
+            <ol>
+                <li>臺灣暗藍鵲</li>
+                <li>紅嘴山鵲</li>
+                <li>長尾山娘</li>
+            </ol>
+        </dd>
+        <dt>分類:</dt>
+        <dd>雀形目</dd>
+        <dd>鴉科</dd>
+        <dt>分布:</dt>
+        <dd>臺灣藍鵲主要分布1,500公尺以下的森林裡</dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            background-color: #ccc;
+        }
+
+        img{
+            width: 100%;
+        }
+        
+        .wrap{
+            width: 900px;
+            margin: 10px auto;
+        }
+
+        .items{
+            width: 300px;
+            /* height: 350px; */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #666;
+            box-sizing: border-box;
+            /* margin:10px 0 10px 10px; */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .items .banner{
+            height: 150px;
+            background:url(img/light.jpg);
+            background-size: cover;
+            
+        }
+
+        .items figure{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 0 0 -60px; 
+            /* 將頭像放置圖片與文字中間 */
+            position: absolute;
+            top:90px;
+            /* 設置left:50%後，使圖片定位於中線(右邊)，再使用margin-left(-px)調整位置 */
+            left:50%; 
+        }
+
+        .txt{
+            font-family: sans-serif;
+            padding:0 15px;
+            padding-top: 60px;
+            box-sizing: border-box;
+            line-height: 1.5;
+            font-size: 14px;
+            border: 20px solid transparent;
+            border-image: url(img/border-image2.png) 20 round;
+        }
+
+        .txt h2{          
+            font-size: 26px;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid rgb(182, 179, 179);
+        }
+
+        .txt p{
+            padding-top: 15px;
+            padding-bottom: 30px;
+            color: #aaa;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="items">
+            <div class="banner">
+            </div>
+            <figure>
+                <img src="./img/Strange.jpg" alt="">
+            </figure>
+            
+            <div class="txt">
+                <h2>Dr. Strange</h2>
+                <p>Hello, I am Steve Strange.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background: url(img/check.jpg);
+            margin: 10px;
+            border: 10px dashed #aaa;
+        }
+
+        .padding{
+            width: 200px;
+            height: 200px;
+            background: url(img/check.jpg);
+            background-clip: padding-box;
+            border: 10px dashed #aaa;
+            margin: 10px;
+        }
+
+        .conent{
+            width: 200px;
+            height: 200px;
+            background: url(img/check.jpg);
+            background-clip: conent-box;
+            border: 10px dashed #aaa;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        h1{
+            /* 
+                background-clip:text
+                    - 目前尚在測試中，故需使用-webkit-、-mos-、-ms-、-o-等來測試。
+                    - 若要使文字可以有背景圖片的樣式，需將文字設置為透明 */
+            background: url(img/check.jpg);
+            color:transparent;
+            -webkit-background-clip:text;
+            font-family: sans-serif;
+            font-size: 34px;
+            font-weight: 900;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hello World！！</h1>
+    <div class="box"></div>
+    <div class="box padding"></div>
+    <div class="box conent"></div>
+    
+</body>
+</html>

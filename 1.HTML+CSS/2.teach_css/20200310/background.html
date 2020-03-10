@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        .map{
+            width: 640px;
+            height: 300px;
+            margin:0 auto;
+            background:  url(images/25.png) no-repeat left center,  url(images/7.png) no-repeat right center, url(images/map.png) center center;
+            transition: .5s;
+            background-size: 100px auto, 150px auto, auto;
+        }
+        .map:hover{
+            background:  url(images/25.png) no-repeat right center,  url(images/7.png) no-repeat left center, url(images/map.png) center center;
+            transition: .5s;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+
+    </div>
+</body>
+</html>

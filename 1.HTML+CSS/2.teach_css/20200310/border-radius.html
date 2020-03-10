@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border radius</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 150px;
+            background: lightcoral;
+            margin:10px;
+            float: left;
+        }
+        .radius1{
+            border-radius: 10%;
+        }
+        .radius2{
+            border-radius: 10px 20px 30px 40px;
+        }
+        .radius3{
+            border-radius: 10px 20px 30px;
+        }
+        .radius4{
+            border-radius: 10px 50px;
+        }
+        .radius5{
+            border-radius: 100% 0 0 0;
+        }
+        .radius6{
+            border-radius: 100% 0;
+        }
+        .radius7{
+            border-radius: 50%;
+        }
+        .radius8{
+            border-radius: 40px/10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box radius1"></div>
+    <div class="box radius2"></div>
+    <div class="box radius3"></div>
+    <div class="box radius4"></div>
+    <div class="box radius5"></div>
+    <div class="box radius6"></div>
+    <div class="box radius7"></div>
+    <div class="box radius8"></div>
+
+</body>
+</html>

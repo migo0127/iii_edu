@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+    <style>
+
+        .box{
+            /* 當螢幕小於640px時 */
+            max-width: 640px;
+            height:300px;
+            background: url("img/map.png");
+            /* background-size: auto; */
+            margin: 10px;
+            border: 2px solid gray;
+        }
+
+        .contain{
+            /* 當螢幕小於640px時 */
+            background: url("img/map.png");
+            background-size: contain;
+        }
+
+        .cover{
+            /* 當螢幕小於640px時 */
+            background: url("img/map.png");
+            background-size: cover;
+        }       
+
+    </style>
+</head>
+<body>
+    <h2> max-width: 640px;</h2>
+    <p>background-size: auto;</p>
+    <div class="box"></div>
+    <hr>
+    <p>background-size: contain; 最長邊填滿
+    </p>
+    <div class="box contain"></div>
+    <hr>
+    <p>background-size: cover; 最短邊填滿</p>
+    <div class="box cover"></div>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            background-color: #ccc;
+        }
+
+        img{
+            width: 100%;
+        }
+        
+        .wrap{
+        width: 900px;
+            margin: 10px auto;
+            display: flex; 
+        }
+
+        .items{
+            width: 300px;
+            height: 350px;
+            background-color: #fff;
+            padding: 10px;
+            padding-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #666;
+            box-sizing: border-box;
+            margin:10px 0 10px 10px;
+        }
+
+        .items figure{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto; 
+        }
+
+        .txt{
+            font-family: sans-serif;
+            padding:0 30px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .txt h2{          
+            font-size: 26px;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid rgb(182, 179, 179);
+        }
+
+        .txt p{
+            padding: 15px 0;
+            color: #aaa;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="items">
+            <figure>
+                <img src="./img/Strange.jpg" alt="">
+            </figure>
+            <div class="txt">
+                <h2>Dr. Strange</h2>
+                <p>Hello, I am Steve Strange.</p>
+            </div>
+        </div>
+        <div class="items">
+            <figure>
+                <img src="./img/Strange.jpg" alt="">
+            </figure>
+            <div class="txt">
+                <h2>Dr. Strange</h2>
+                <p>Hello, I am Steve Strange.</p>
+            </div>
+        </div>
+        <div class="items">
+            <figure>
+                <img src="./img/Strange.jpg" alt="">
+            </figure>
+            <div class="txt">
+                <h2>Dr. Strange</h2>
+                <p>Hello, I am Steve Strange.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
