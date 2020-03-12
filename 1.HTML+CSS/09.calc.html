@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            background: #ccc;
+            position: relative;
+        }
+
+        .wrap{
+            max-width: 800px;
+            /* 
+                當內容區內容不足(高度不足)時，footer會無法在最底部，故可以
+                將外部容器本身的高度設置為視口高度，再扣除內容區的各padding
+                、border、margin 等，即可使footer的位置置於視口的最底部。
+             */
+            height: calc(100vh - 78px);
+
+            /* min-height: calc(100vh - 78px);*/
+            /* 8 + 10 + 60 */
+            
+            /* 
+                min-height：最小高度，當內容區高度撐開過視口後，若僅設置
+                height，會導致footer與撐開的內容區重疊，故改設min-height
+                後，當高度大於設置的高度時，瀏覽器就會自動調整高度。
+             */           
+        }
+
+        .test-hight{
+            width: 100px;
+            height: 700px;
+            background-color: bisque;
+        }
+
+        .wrap .txt{
+            /* 
+                使用calc(相對單位-絕對單位)，會自動減去每個框框的左右的padding、margin、border，
+                若未扣除這些會影響實際框大小的增加尺寸，一排的四個會因這些增加，導致每個框框的實際
+                大小不是真的25%，造成無法做到一排四個，需要再調整外容器的寬度，故直接使用calc，讓
+                本身小框框的尺寸直接扣除padding、margin、border的合即可，高度亦可如此設置。
+            */
+            width: calc(25% - 16px); /* 實際上就是 25% - 8px -8px */
+            /* width: 25%; */
+            background-color: #fff;
+            float:left;
+            margin: 8px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .txt h4{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        /* 要使p標籤的內容區也是同高，多出的文字隱藏 */
+        /* 方法一： */
+        /* .txt p{
+            overflow: hidden;
+            height: 79px;
+        } */
+
+        /* 方法二： */
+        .txt p{
+            overflow: hidden;
+            display: -webkit-box;
+            /* 設置為垂直方向 */
+            -webkit-box-orient:vertical;
+            /* 設定要顯示幾行 */
+            -webkit-line-clamp:4;
+        }
+
+        .clean{
+            clear: both;
+        }
+
+        /* 
+            在頁面內容區高度不足時，無法使footer的位置在頁面的最下面，
+            可以在最外容器wrap設置calc，在扣除增加 padding、border、
+            margin，使其置於網頁底部。 
+        */
+
+
+        .footer{
+            width: 100%;
+            color:#fff;
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="txt">
+            <h4 title="《高爾夫》三巨頭同組爭龍頭，拉姆挑戰取代麥克羅伊">《高爾夫》三巨頭同組爭龍頭，拉姆挑戰取代麥克羅伊</h4>
+            <p>在主辦單位的精心安排下，當今三巨頭前兩回合將同組較勁，其中西班牙球星Jon Rahm（霍恩‧拉姆）目前落後0.8068分，而Brooks Koepka（布魯克斯‧柯普卡）的重返榮耀之路則被拉開至1.507分，但週日下午冠軍可獨得八十分，兩人都有機會一役攻頂。</p>
+        </div>
+        <div class="txt">
+            <h4 title="NBA／詹皇捨身製造空檔 AD絕殺球放槍">NBA／詹皇捨身製造空檔 AD絕殺球放槍</h4>
+            <p>湖人隊昨日與籃網隊鏖戰到正規賽最後一刻，戴維斯零點九秒三分球失手，最終籃網以一○四比一○二險勝。戴維斯將輸球責任一肩扛，表示詹姆斯已經吸引防守、製造其他人空檔，沒投進是自己的責任。</p>
+        </div>
+        <div class="txt">
+            <h4 title="NBA／詹皇捨身製造空檔 AD絕殺球放槍">NBA／詹皇捨身製造空檔 AD絕殺球放槍</h4>
+            <p>湖人隊昨日與籃網隊鏖戰到正規賽最後一刻，戴維斯零點九秒三分球失手，最終籃網以一○四比一○二險勝。戴維斯將輸球責任一肩扛，表示詹姆斯已經吸引防守、製造其他人空檔，沒投進是自己的責任。</p>
+        </div>
+        <div class="txt">
+            <h4 title="NBA／詹皇捨身製造空檔 AD絕殺球放槍">NBA／詹皇捨身製造空檔 AD絕殺球放槍</h4>
+            <p>湖人隊昨日與籃網隊鏖戰到正規賽最後一刻，戴維斯零點九秒三分球失手，最終籃網以一○四比一○二險勝。戴維斯將輸球責任一肩扛，表示詹姆斯已經吸引防守、製造其他人空檔，沒投進是自己的責任。</p>
+        </div>
+        <div class="clean test-hight"></div>
+    </div>
+    <div class="clean footer">
+        <p>This is footer</p>
+    </div>
+</body>
+</html>

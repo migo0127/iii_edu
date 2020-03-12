@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit</title>
+    <style>
+
+        /* 
+            讓圖片符合寬高時的設置方式，分為兩種：
+                ● 背景圖片：使用 background 樣式
+                    background-img
+                    background-size
+                
+                ● 前景圖片：<img>標籤搭配object-fit樣式
+                    <img></img>
+                    object-fit
+            ※ 依需求進行搭配，若非一定為背景圖的，建議使用前景圖<img>搭object-fit方式，這樣樣式比較不會太多太花。        
+        */
+
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            margin: 10px;
+            float: left;
+        }
+
+        .box img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .box .fill{
+            /* 預設值fill */
+            object-fit:fill;
+        }
+
+        .box .contain{
+            object-fit:contain;
+        }
+
+        .box .cover{
+            object-fit:cover;      
+           /* 定位圖片的中心點  */
+            object-position:top center;
+        }
+
+        .box .none{
+            object-fit:cover;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <img src="img/Strange.jpg" alt="">
+    </div>
+    <div class="box ">
+        <img class="fill" src="img/Strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="contain" src="img/Strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="cover" src="img/Strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="none" src="img/Strange.jpg" alt="">
+    </div>
+    
+</body>
+</html>

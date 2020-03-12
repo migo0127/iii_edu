@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <link rel="stylesheet" href="css/normalise.css">
+    <style>
+
+        /* 
+            Z軸的變形要搭配視距的設置
+        */
+        html{
+            perspective: 800px;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            margin:20px 30px;
+            transition: .3s;
+            float: left;
+        }
+
+        /* .transformX{
+            transform:translateX(50px);
+        } */
+
+        .transformX:hover{
+            transform:translateX(50px);
+        }
+
+        .transformY:hover{
+            transform:translateY(20px);
+        }
+
+        .transform:hover{
+            transform:translate(20px,-20px);
+        }
+
+        .transformZ:hover{
+            transform:translateZ(20px);
+        }
+
+        .rotateX:hover{
+            transform:rotateX(60deg);
+        }
+
+        .rotateY:hover{
+            transform:rotateY(60deg);
+        }
+
+        .rotate:hover{
+            transform:rotate(60deg);
+        }
+
+        .rotateZ:hover{
+            transform:rotateZ(-60deg);
+        }
+
+        .scaleX:hover{
+            transform: scaleX(1.5);
+        }
+
+        .scaleY:hover{
+            transform: scaleY(.7);
+        }
+
+        .scale:hover{
+            transform: scale(1.3);
+        }
+
+        .scaleZ:hover{
+            transform: scaleZ(1.3)
+        }
+
+        .wrap2{
+            width: 100px;
+            height: 100px;
+            background-color:#aaa;
+            margin: 20px 30px;
+            float: left;
+        }
+
+        .scale2{
+            margin: 0;
+        }
+
+        .wrap2:hover .scale2{
+            transform: scale(.1);
+        }
+
+        .wrap3{
+            width: 100px;
+            height: 100px;
+            background-color:#aaa;
+            margin: 20px 30px;
+            float: left;
+        }
+
+        .scale3{
+            margin: 0;
+        }
+
+        .wrap3:hover .scale3{
+            transform: scale(0);
+        }
+
+        .wrap4{
+            width: 100px;
+            height: 100px;
+            background-color:#aaa;
+            margin: 20px 30px;
+            float: left;
+        }
+
+        .scale4{
+            margin: 0;
+            transform: scale(0);
+        }
+
+        .wrap4:hover .scale4{
+            transform: scale(1);
+        }
+
+        .wrap5{
+            width: 100px;
+            height: 100px;
+            background-color:#aaa;
+            margin: 20px 30px;
+            float: left;   
+            /* 將scale5的上移位置隱藏，等hover時下移顯示  */
+            overflow: hidden;
+        }
+
+        .scale5{
+            margin: 0;
+            transform: translateY(-100px);
+        }
+
+        .wrap5:hover .scale5{
+            transform: translateY(0px);
+        }
+
+        .wrap6{
+            width: 100px;
+            height: 100px;
+            background-color:#aaa;
+            margin: 20px 30px;
+            float: left;             
+        }
+
+        .rotate1{
+            /* 設置旋轉的中心點位置 */
+            transform-origin:left top; 
+            margin: 0;
+        }
+
+        .wrap6:hover .rotate1{            
+            transform: rotate(60deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div class="box transformX">transformX</div>
+        <div class="box transformY">transformY</div>
+        <div class="box transform">transform</div>
+        <div class="box transformZ">transformZ</div>
+        
+        <div class="box rotateX">rotateX</div>
+        <div class="box rotateY">rotateY</div>
+        <div class="box rotate">rotate</div>
+        <div class="box rotateZ">rotateZ</div>
+        
+        <div class="box scaleX">scaleX</div>
+        <div class="box scaleY">scaleY</div>
+        <div class="box scale">scale</div>
+        <div class="box scaleZ">scaleZ</div>
+
+    <div class="wrap2">
+        <div class="box scale2">scale2</div>
+    </div>
+
+    <div class="wrap3">
+        <div class="box scale3">scale3</div>
+    </div>
+
+    <div class="wrap4">
+        <div class="box scale4">scale4</div>
+    </div>
+
+    <div class="wrap5">
+        <div class="box scale5">scale5，從上往下顯示出來</div>
+    </div>
+
+    <div class="wrap6">
+        <div class="box rotate1">rotate1、transform-origin</div>
+    </div>
+    
+</body>
+</html>
