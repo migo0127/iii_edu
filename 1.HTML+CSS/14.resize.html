@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant--TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resize</title>
+    <style>
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            /* 
+            resize：文本框可以隨意調整寬高
+            必須搭配overflow
+             */
+            resize:both;
+            overflow: hidden;
+        }
+
+        .box3{
+            /* 文本框無法在調整大小 */
+            resize:none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box1">box1</div>
+    <textarea name="" id="" cols="30" rows="10" class="box2">box2</textarea>
+    <textarea name="" id="" cols="30" rows="10" class="box3">box3</textarea>
+</body>
+</html>

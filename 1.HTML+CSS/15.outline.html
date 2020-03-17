@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid #000;
+            /* 不會影響框大小，不會影響布局 */
+            outline: 5px solid red;
+            margin: 30px;
+            transition: .3s;
+        }
+
+        .box1:hover{
+            /* 邊框外的框距離邊框20px */
+            outline-offset:20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box1"></div>
+    
+</body>
+</html>

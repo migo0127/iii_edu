@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            background: #ccc;
+            position: relative;
+        }
+
+        .wrap{
+            max-width: 800px;
+            height: calc(100vh - 78px);
+        }
+
+        .test-hight{
+            width: 100px;
+            height: 700px;
+            background-color: bisque;
+        }
+
+        .container{
+            width: calc(25% - 16px);             
+            background-color: #fff;
+            margin: 50px;                    
+            position: relative;   
+        }
+
+        .wrap .txt{
+            width: 100%;
+            background-color: #fff;
+            padding: 5px 10px;
+            float:left;
+            box-sizing: border-box;    
+        }
+
+        .wrap .pic{
+            width: 100%;
+        }
+
+        .pic figure{
+            width: 90%;
+            margin:0px auto;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .pic figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pic h4{
+            width: 90%;
+            color:#fff;
+            padding-left: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            background:linear-gradient(to bottom rgba(0,0,0,.3),rgba(0,0,0,1));
+            position: absolute;
+            bottom:4%;
+            left: 0;
+            transform: translateY(30px);
+            box-sizing: border-box;
+            display: none;
+        }
+
+        .pic figure:hover h4{
+            display: block;
+            transform: translateY(0px);
+        }
+
+        .txt p{
+            font-size: 14px;
+            overflow: hidden;
+            display: -webkit-box;
+            /* 設置為垂直方向 */
+            -webkit-box-orient:vertical;
+            /* 設定要顯示幾行 */
+            -webkit-line-clamp:4;
+        }
+
+        .clean{
+            clear: both;
+        }
+
+        .footer{
+            width: 100%;
+            color:#fff;
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap"> 
+        <div class="container">
+            <div class="pic">
+                <figure>
+                    <h4 title="《高爾夫》三巨頭同組爭龍頭，拉姆挑戰取代麥克羅伊">《高爾夫》三巨頭同組爭龍頭，拉姆挑戰取代麥克羅伊</h4>
+                    <img src="./img/light.jpg" alt="">
+                </figure> 
+            </div>      
+            <div class="txt">                         
+                <p>在主辦單位的精心安排下，當今三巨頭前兩回合將同組較勁，其中西班牙球星Jon Rahm（霍恩‧拉姆）目前落後0.8068分，而Brooks Koepka（布魯克斯‧柯普卡）的重返榮耀之路則被拉開至1.507分，但週日下午冠軍可獨得八十分，兩人都有機會一役攻頂。</p>
+            </div>
+        </div>
+        <!-- <div class="txt">
+            <h4 title="NBA／詹皇捨身製造空檔 AD絕殺球放槍">NBA／詹皇捨身製造空檔 AD絕殺球放槍</h4>
+            <p>湖人隊昨日與籃網隊鏖戰到正規賽最後一刻，戴維斯零點九秒三分球失手，最終籃網以一○四比一○二險勝。戴維斯將輸球責任一肩扛，表示詹姆斯已經吸引防守、製造其他人空檔，沒投進是自己的責任。</p>
+        </div>
+        <div class="txt">
+            <h4 title="NBA／詹皇捨身製造空檔 AD絕殺球放槍">NBA／詹皇捨身製造空檔 AD絕殺球放槍</h4>
+            <p>湖人隊昨日與籃網隊鏖戰到正規賽最後一刻，戴維斯零點九秒三分球失手，最終籃網以一○四比一○二險勝。戴維斯將輸球責任一肩扛，表示詹姆斯已經吸引防守、製造其他人空檔，沒投進是自己的責任。</p>
+        </div>
+        <div class="txt">
+            <h4 title="NBA／詹皇捨身製造空檔 AD絕殺球放槍">NBA／詹皇捨身製造空檔 AD絕殺球放槍</h4>
+            <p>湖人隊昨日與籃網隊鏖戰到正規賽最後一刻，戴維斯零點九秒三分球失手，最終籃網以一○四比一○二險勝。戴維斯將輸球責任一肩扛，表示詹姆斯已經吸引防守、製造其他人空檔，沒投進是自己的責任。</p>
+        </div> -->
+        </div>
+    
+    <div class="clean footer">
+        <p>This is footer</p>
+    </div>
+</body>
+</html>

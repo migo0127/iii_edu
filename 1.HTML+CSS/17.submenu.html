@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            background-color: #ccc;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .wrap{
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+
+        .menu{
+            width: 80%;
+            height: 36px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu > li{
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .menu > li > a{
+            display: block;
+            color: #999;
+            padding: 8px 0px;
+            box-sizing: border-box;
+        }
+
+        .menu > li > a:hover{
+            background-color: lightskyblue;
+            color: #fff;
+        }
+
+
+        .menu .submenu{
+            width: 192px;
+            background-color: #fff;
+            display: none;
+        }
+
+        .submenu > li{
+            width: 100%;
+        }
+
+        .submenu >li > a{
+            display: block;
+            color: #999;
+            padding: 8px 0px;
+            box-sizing: border-box;
+        }
+
+        .menu > .sub:hover .submenu{
+            display: block;            
+        }
+
+        .submenu > li:hover a{
+            color:#fff;            
+            background-color: lightskyblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <ul class="menu">
+            <li><a href="javaspcript:;">Home</a></li>
+            <li><a href="javaspcript:;">About</a></li>
+            <li class="sub">
+                <a href="javaspcript:;">Album</a>
+                <ul class="submenu">
+                    <li><a href="javaspcript:;">Family</a></li>
+                    <li><a href="javaspcript:;">Pet</a></li>
+                    <li><a href="javaspcript:;">Etc</a></li>
+                </ul>
+            </li>
+            <li><a href="javaspcript:;">contact</a></li>
+        </ul>
+    </div>
+</body>
+</html>

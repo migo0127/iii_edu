@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body{
+            background-color: #ccc;
+        }
+
+        /* img{
+            width: 100%;
+        } */
+
+        .general-transition{
+            transform: .3s linear;
+        }
+        
+        .wrap{
+            width: 900px;
+            margin: 50px auto;
+        }
+
+        .items{
+            width: 300px;
+            /* height: 350px; */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #666;
+            box-sizing: border-box;
+            /* margin:10px 0 10px 10px; */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            transition: .3s linear;
+        }
+
+        .items .banner{
+            height: 150px;
+            background:url(img/light.jpg);
+            background-size: cover;
+            
+        }
+
+        .items figure{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;            
+            background-color: #000;
+            /* margin: 0 0 0 -60px;  */
+            /* 將頭像放置圖片與文字中間 */
+            position: absolute;
+            top:90px;
+            /* 
+            將頭像置中，方法一：
+            設置left:50%後，使圖片定位於中線(右邊)，再使用margin-left(-px)調整位置 */
+            left:50%; 
+            /* 將頭像置中，方法二： */
+            transform: translate(-50%);
+        }
+
+        .items figure > .avater-pic{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .items figure > .picture{
+            width: 40%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            /* 將此圖片的位置平移置中 */
+            transform: translate(-50%,-50%);
+            opacity: 0;       
+        }
+
+        .items:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 10px 12px rgb(167, 164, 164);
+        }
+
+        .items:hover figure > .avater-pic{
+            opacity: .6;
+        }
+
+        .items:hover figure > .picture{
+            opacity: 1;        
+        }
+
+        .txt{
+            font-family: 'Dancing Script', cursive;
+            padding:0 15px;
+            padding-top: 60px;
+            box-sizing: border-box;
+            line-height: 1.5;
+            font-size: 14px;
+            border: 20px solid transparent;
+            border-image: url(img/border-image2.png) 20 round;
+        }
+
+        .txt h2{          
+            font-size: 26px;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1.5px solid rgb(182, 179, 179);
+        }
+
+        .items:hover h2{
+            /* 
+            因letter-spacing是在文字後執行間隔，會導致第一個字母偏左移，
+            所以使用text-index在第一個文字前加上3px空格，來使文字可以繼
+            續保持置中。
+
+            text-indent：段落第一個文字縮排
+             */
+            text-indent: 3px;
+            /* 在字後面間隔3px */
+            letter-spacing: 3px;
+        }
+
+        .txt p{
+            padding-top: 15px;
+            padding-bottom: 30px;
+            color: #aaa;
+        }
+
+        .txt .btn{
+            display: block;    
+            height: 25px;
+            /* cursor：讓a標籤的滑數變為手指頭的樣式 */
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 1px -1px 1px black;
+            background: linear-gradient(to bottom,#b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+            padding: 8px 12px;
+            border-radius: 5px;
+            /* transition: 0.2s; */
+        }
+
+        .txt .btn:hover{
+            font-size: 22px;            
+        }
+
+        .items:hover .btn{
+            background: linear-gradient(to bottom,#fcecfc 0%,#fba6e1 50%,#fd89d7 51%,#ff7cd8 100%);
+        }
+
+        /* 
+            若是 follow me 的按鈕在hover時，要漸層效果為0，需使用以下方式：
+            1.過渡效果沒辦法套用在漸層上，所以要變成兩個按鈕。
+            2.在使用定位的方式將兩層按鈕疊在一起，按鈕文字要對齊。
+              (可使用::after的方式創建另一顆按鈕)
+            3.上層按鈕有漸層，在hover時，透明度0。
+            4.下層按鈕為基本底色(無漸層的底色)，hover時露出。    
+        */
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="items general-transition">
+            <div class="banner">
+            </div>
+            <figure>
+                <img class="avater-pic general-transition" src="./img/Strange.jpg" alt="">
+                <img class="picture general-transition" src="./img/picture.svg" alt="">
+            </figure>
+            
+            <div class="txt">
+                <h2 class="general-transition">Dr. Strange</h2>
+                <p>Hello, I am Steve Strange.</p>
+                <a class="btn general-transition" role="botton">Follow Me</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

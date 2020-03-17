@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .wrap{
+            width: 960px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .wrap .box{
+            width: 120px;
+            height: 120px;
+            background-color: #bfa;
+            margin: 10px;
+        }
+
+        .wrap .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .wrap2{
+            width: 960px;
+            height: 300px;
+            background-color: #bfa;
+            margin: 30px auto;
+            display: flex;
+        }
+
+        .wrap2 .box{
+            width: 120px;
+            /* height: 120px; */
+            background-color: #aaa;
+            margin: 10px;
+        }
+
+        .wrap2 .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .wrap3{
+            width: 960px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .wrap3 .box{
+            width: 120px;
+            height: 120px;
+            background-color: #bfa;
+            margin: 10px;
+            /* 彈性元素將剩餘空間撐滿 */
+            flex-grow:1;
+        }
+
+        .wrap3 .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .wrap4{
+            width: 960px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 10px auto;
+            display: flex;
+        }
+
+        .wrap4 .box{
+            width: 120px;
+            height: 120px;
+            background-color: #bfa;
+            margin: 10px;
+            
+        }
+
+        .wrap4 .grow1{
+            /* 彈性元素grow1與grow2將剩餘空間依比例分配*/
+            flex-grow:1;
+        }
+
+        .wrap4 .grow2{
+            /* 彈性元素grow1與grow2將剩餘空間依比例分配*/
+            flex-grow:2;
+        }
+
+        .wrap4 .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .wrap5{
+            width: 400px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .wrap5 .box{
+            width: 120px;
+            height: 120px;
+            background-color: #bfa;
+            margin: 10px;
+            /* 
+            當彈性元素的寬度/高度超過彈性元素時，flex-shrink預設會自動平均收
+            縮。  
+            */
+            flex-shrink:1;
+        }
+
+        .wrap5 .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .wrap6{
+            width: 400px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 10px auto;
+            display: flex;
+        }
+
+        .wrap6 .box{
+            width: 120px;
+            height: 120px;
+            background-color: #bfa;
+            margin: 10px;
+            /* 不收縮，彈性元素寬度比彈性容器寬，所以會跑出去 */
+            flex-shrink: 0;
+        }
+
+        .wrap6 .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .wrap7{
+            width: 400px;
+            height: 300px;
+            background-color: #ccc;
+            margin: 10px auto;
+            display: flex;
+        }
+
+        .wrap7 .box{
+            width: 120px;
+            height: 120px;
+            background-color: #bfa;
+            margin: 10px;
+        }
+
+        .wrap7 .shrink1{
+            /* 僅將第一個彈性元素設置為不收縮，但其他默認為收縮 */
+            flex-shrink:0;
+        }
+
+        .wrap7 .inner{
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+
+    <div class="wrap2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+
+    <div class="wrap3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+
+    <div class="wrap4">
+        <div class="box grow1">1</div>
+        <div class="box grow2">2</div>
+        <div class="box grow3">3</div>
+        <div class="box grow4">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+
+    <div class="wrap5">
+        <div class="box grow1">1</div>
+        <div class="box grow2">2</div>
+        <div class="box grow3">3</div>
+        <div class="box grow4">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+
+    <div class="wrap6">
+        <div class="box shrink1">1</div>
+        <div class="box shrink2">2</div>
+        <div class="box shrink3">3</div>
+        <div class="box shrink4">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+
+    <div class="wrap7">
+        <div class="box shrink1">1</div>
+        <div class="box shrink2">2</div>
+        <div class="box shrink3">3</div>
+        <div class="box shrink4">4
+            <div class="inner">4-1</div>
+        </div>
+    </div>
+    
+</body>
+</html>

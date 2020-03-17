@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }       
+
+        .wrap{
+            margin: 50px 20px;
+        }
+
+        .container{
+            max-width: 1200px;
+            column-count:4;
+            column-fill: auto;
+            
+        }
+
+        .items {
+            background-color: #fff;
+            border: 1px black solid;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+            -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */page-break-inside: avoid; /* Firefox */break-inside: avoid; /* IE 10+ */            
+        }
+
+        .items figure > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .items .txt{
+            font-size: 14px;
+            padding:0 10px;
+            box-sizing: border-box;
+        }
+
+        .items .txt p{
+            margin: 10px 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>日落黃昏</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>有人說香菜起源於西亞，也有人說是地中海地區，由張騫從西域帶回中國，清朝初期來到臺灣。彰化北斗的產量高居全臺，可以說是香菜的故鄉，</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>香菜富含營養價值，含維生素A、C、B1、B2、K、胡蘿蔔素，以及豐富的鈣、鐵、磷、鎂等，尤其是維生素C每100克高達63毫克，超過桃、梨和蘋果的含量</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>會先煮過，因此好好清洗是重點。買回家的香菜整理後裝進保鮮盒中，倒入蓋過香菜</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>日落黃昏</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>加些水果、番茄、洋蔥把它打成醬料，是個不錯的辦法喔！</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>日落黃昏</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>作者簡介：「農業兒童網」提供豐富的農業知識，可以為您解答農業問題，也提供多樣的生活資訊，可以增加您的生活樂趣呢！邀請大家一起來認識好吃、好玩、好健康的台灣農業，同時也一起來關心我們的農業、守護我們的鄉土。</p>
+                </div>
+            </div>
+            <div class="items">
+                <figure>
+                    <img src="https://i.picsum.photos/id/788/600/350.jpg" alt="">
+                </figure>
+                <div class="txt">
+                    <p>日落黃昏</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
