@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture</title>
+</head>
+<body>
+
+    <!-- 
+        當在不同螢幕時適用(切換)不同圖片，可使用<pictrue>搭配
+        <source>及<img>來使用 
+    -->
+    <picture>
+        <source media="(max-width:768px)" srcset="img/dr_fate.jpg">
+        <source media="(max-width:992px"  srcset="img/deadpool.jpg" >
+        <img src="img/dr_strange.jpg" alt="" style="width:auto;">
+    </picture>
+    
+</body>
+</html>

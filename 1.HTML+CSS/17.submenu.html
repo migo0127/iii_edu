@@ -13,72 +13,60 @@
         }
 
         body{
-            background-color: #ccc;
+            background-color: silver;
         }
+ 
 
-        a{
-            text-decoration: none;
-        }
+       a{
+           text-decoration: none;
+       }
 
-        .wrap{
-            max-width: 960px;
-            margin: 20px auto;
-        }
+       .wrap{
+           max-width: 960px;
+           margin: 0 auto;
+           background-color: #fff;
+       }
 
+       .menu{
+           display: flex;
+           justify-content: space-around;
+       }
 
-        .menu{
-            width: 80%;
-            height: 36px;
-            background-color: #fff;
-            display: flex;
-            justify-content: space-around;
-        }
+       .menu > li{
+           width: 100%;
+           text-align: center;
+       }
 
-        .menu > li{
+       .menu > li > a,.submenu > li > a {
+           display: block;
+           padding: 10px 0;
+           color: #999;
+       }
+
+       .menu > li > a:hover,.submenu > li > a:hover{
+           background-color: skyblue;
+           color: #fff;
+       }
+
+       .sub{
+           position: relative;
+       }
+
+       .sub > .submenu{
             width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .menu > li > a{
-            display: block;
-            color: #999;
-            padding: 8px 0px;
-            box-sizing: border-box;
-        }
-
-        .menu > li > a:hover{
-            background-color: lightskyblue;
-            color: #fff;
-        }
-
-
-        .menu .submenu{
-            width: 192px;
+            max-height: 0;
+            position: absolute;
             background-color: #fff;
-            display: none;
-        }
+            overflow: hidden;
+            transition: .3s;
+       }
 
-        .submenu > li{
-            width: 100%;
-        }
+       .sub:hover >.submenu{
+           max-height: 200px;
+           overflow: visible;
+       }
 
-        .submenu >li > a{
-            display: block;
-            color: #999;
-            padding: 8px 0px;
-            box-sizing: border-box;
-        }
-
-        .menu > .sub:hover .submenu{
-            display: block;            
-        }
-
-        .submenu > li:hover a{
-            color:#fff;            
-            background-color: lightskyblue;
-        }
-
+        
 
     </style>
 </head>
@@ -99,5 +87,6 @@
             <li><a href="javaspcript:;">contact</a></li>
         </ul>
     </div>
+
 </body>
 </html>

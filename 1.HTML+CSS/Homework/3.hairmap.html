@@ -18,10 +18,6 @@
             margin: 0 auto;
         }
 
-        :root{
-            --mainColor:rgb(212, 94, 118);
-        }
-
         /* hearder */
         .main-header{
             padding: 10px 0;
@@ -66,10 +62,6 @@
             padding-right: 20px;
         }
 
-        .right-header{
-            display: flex;
-        }
-
         .right-header .login{
             width: 155px;
             display: flex;
@@ -98,29 +90,6 @@
             object-fit: contain;
         }
 
-        /* RWD */
-        @media only screen and (max-width:768px){
-           .container{
-               width: 100%;
-           }
-
-           .main-header .logo{
-               margin-left: 20px;
-           }
-
-           .main-header .left-header{
-               display: none;
-           }
-
-           .right-header .login{
-               display: none;
-           }
-
-           .setting picture source{
-              margin-right: -8px;
-           }
-        }
-
         /* article */
         .main-article > .container{
             height: 450px;
@@ -129,7 +98,7 @@
         }
 
         .main-article .txt-wrap{
-            background-color: rgba(0,0,0,.4);
+            background-color: rgba(0,0,0,.2);
             height: 270px;
             text-align: center;
             padding-bottom: 10px;
@@ -167,10 +136,10 @@
         }
 
         .main-article .form-select{
-            width: 42%;
+            width: 420px;
             height: 35px;
             background-color: rgba(0,0,0,.6);
-            border: 2px solid var(--mainColor);
+            border: 2px solid rgb(212, 94, 118);
             display: flex;
             margin: 0 auto;
         }
@@ -185,7 +154,7 @@
         .main-article select{
             width: 25%;
             height: 28px;
-            border-right: 2px solid var(--mainColor);
+            border-right: 2px solid rgb(212, 94, 118);
             background-color: rgba(0,0,0,.1);
             margin-top: 3px;
             box-sizing: border-box;
@@ -204,7 +173,7 @@
         .main-article button{
             width: 25%;
             height: 80%;
-            background-color: var(--mainColor);
+            background-color: rgb(212, 94, 118);
             font-size: 16px;
             padding: 0;
             margin: 3px 3px;
@@ -219,12 +188,11 @@
 
         /* article-bottom-pic */
         .bottom-icon{
+            height: 170px;
             background-color: rgba(0,0,0,.8);
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            padding: 24px 0;
-            box-sizing: border-box;
         }
 
         .bottom-icon .b-icon{
@@ -237,45 +205,6 @@
             color:#fff;
             width:110px;
             text-align: center;
-        }
-
-        @media only screen and (max-width:768px){
-            .main-article > .container{
-                width: 100%;
-            }
-
-            .main-article .txt-wrap{
-                background-color: rgba(0,0,0,.2);
-                height: 290px;
-            }
-
-            .main-article .form-select{
-                width: 80%;
-                flex-wrap: wrap;
-            }
-
-            .form-select input{
-                /* width: 205px; */
-                width: 60%;
-                padding:0 ;
-                padding-left: 8px;
-                box-sizing: border-box;
-            }
-
-            .main-article button{
-                width: 100%;
-                margin: 5px 0;
-            }
-
-            .bottom-icon{
-                background-color: rgba(0,0,0,1);
-                flex-direction: column;
-            }
-
-            .bottom-icon .b-icon{
-                padding: 10px 0;
-                box-sizing: border-box;
-            }
         }
 
         /* hot */
@@ -293,7 +222,7 @@
             height: 3px;
             background-color: #000;
             position: absolute;
-            top: 32px;
+            top: 28.8px;
             left:50%;
             margin-left: -15px;
         }
@@ -320,7 +249,7 @@
 
         .items span{
             display: block;
-            width: 60% ;
+            width: 120px;
             height: 28px;
             line-height: 28px;
             text-align: center;
@@ -330,7 +259,7 @@
         }
 
         .items > span{
-            color:var(--mainColor);
+            color:rgb(212, 94, 118);
             position: absolute;
             bottom: 8%;
             left: 42%;
@@ -338,7 +267,7 @@
 
         .hot-wrap .hot-more{
             padding: 3px 10px;
-            background-color: var(--mainColor);
+            background-color: rgb(212, 94, 118);
             box-sizing: border-box;
             position: relative;
             top: 0;
@@ -347,34 +276,6 @@
 
         .hot-more > a{
             color:#fff;
-        }
-
-
-        @media only screen and (max-width:768px){
-            .hot-wrap h2{
-                margin-top: 330px;
-                margin-bottom: 30px;
-            }
-
-            .hot-pic{
-                flex-wrap: wrap;
-                padding-left: 40px;
-                padding-right: 20px;
-            }
-
-            .hot-pic .items{
-                width: calc(50% - 20px);
-                margin-bottom: 10px;
-            }
-
-            .hot-wrap h2{
-                color:rgb(131, 128, 128);
-            }
-
-            .hot-wrap .hot-more{
-                top: 0;
-                left:75%;
-            }
         }
 
         /* topic */
@@ -394,7 +295,7 @@
             height: 3px;
             background-color: #000;
             position: absolute;
-            top: 33px;
+            top: 28.8px;
             left:50%;
             margin-left: -15px;
         }
@@ -427,9 +328,7 @@
         }
 
         .topic-items p{
-            width: 100%;
-            padding:0 5px;
-            box-sizing: border-box;
+            width: 270px;
             position: absolute;
             top:50%;
             margin-top: -8px;
@@ -441,7 +340,7 @@
 
         .topic-wrap .topic-more{
             padding: 3px 10px;
-            background-color: var(--mainColor);
+            background-color: rgb(212, 94, 118);
             box-sizing: border-box;
             position: relative;
             top: 0;
@@ -450,27 +349,6 @@
 
         .topic-more > a{
             color:#fff;
-        }
-
-        @media only screen and (max-width:768px){
-            .topic-pic{
-                flex-direction: column;
-            }
-
-            .topic-pic .topic-items{
-                width: 100%;
-                height: 226px;
-                margin-bottom: 10px;
-            }
-
-            .topic-wrap h2{
-                color:rgb(131, 128, 128);
-            }
-
-            .topic-wrap .topic-more{
-                top: 0;
-                left:75%;
-            }
         }
 
         /* footer */
@@ -501,10 +379,6 @@
             position: relative;
         }
 
-        .app-txt h2{
-            text-align: center;
-        }
-
         .app-txt h2::after{
             content: "";
             display: block;
@@ -513,22 +387,11 @@
             background-color: #000;
             position: absolute;
             top:30px;
-            left:40%;
-        }
-
-        .app-pic{
-            display: flex;
-            justify-content: center;
-        }
-
-        .app-pic > img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            left:27%;
         }
 
         .app-txt > p{
-            color:var(--mainColor);
+            color:rgb(212, 94, 118);
         }
 
         /* footer-apply */
@@ -554,7 +417,6 @@
         .apply .apply-txt p{
             margin: 0;
         }
-
 
         .apply-txt p:nth-child(2),
         .apply-txt p:nth-child(5){
@@ -589,7 +451,7 @@
             left: 30.5%;
         }
 
-        .bot-more .apply-btn > button{
+        .bot-more > button{
             width: 150px;
             height: 32px;
             border: none;
@@ -636,7 +498,6 @@
             display: block;
             font-size: 13px;
             color: rgb(56, 54, 54);
-            margin-bottom: 5px;
         }
 
         .footer-icon > a > img{
@@ -649,23 +510,18 @@
             width: 135px;
             height: 40px;
             background: url("img/02/pics_1129/btn_join.png");
-            position: relative;
         }
 
-        .join  a{
+        .join span a{
             display: block;
             width: 100%;
             height: 100%;
             line-height: 40px;
             text-align:center;
             font-size: 14px;
-            color: var(--mainColor);
-            padding-left:30px ;
+            color: rgb(212, 94, 118);
+            padding-left: 30px;
             box-sizing: border-box;
-            position: absolute;
-            top: 0;
-            left:0;
-            /* transform: translate(36%); */
         }
 
         /* footer-copy */
@@ -685,117 +541,6 @@
             margin: 0 auto;
         }
 
-        @media only screen and (max-width:768px){
-            .main-footer .contact{
-                width: 100%;
-            }
-
-            .app-wrpa .phone{
-                width: 50%;
-                height: 45%;
-                /* padding-top: 55px; */
-            }
-
-            .app-wrpa .phone > img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .app-pic{
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .app-txt h2{
-                margin-left: -25px;
-            }
-
-            .app-txt h2::after{
-                top:22%;
-                left:27%;
-            }
-
-            .app-txt  p{
-                display: none;
-            }
-
-            .apply-wrap .apply{
-                padding: 0;
-                margin: 0;
-            }
-
-            .apply .apply-txt{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .apply .apply-txt p{
-                text-align: center;
-                width: 100%;
-                padding-top: 5px;
-                margin: 20px 0;
-            }
-
-            .apply-wrap .bot-more{
-                flex-direction: column;
-            }
-
-            .bot-more h3::after{
-                top:35px;
-                left: 43%;
-            }
-
-            .bot-more .apply-btn{
-                display: flex;
-                justify-content: center;
-                padding: 0;
-                margin: 0;
-            }
-
-            .bot-more .apply-btn > button{
-                width: 150px;
-                margin: 0 10px 20px;
-        }
-
-            .main-footer .contact{
-                flex-direction: column;
-                padding:0 10px;
-                margin-bottom: 20px;
-                box-sizing: border-box;
-            }
-
-            .main-footer .info{
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .footer-icon{
-                padding: 0 10px;
-                margin-bottom: 10px;
-            }
-
-            .main-footer .join{
-                top:0;
-                left: 50%;
-                transform: translate(-50%);
-            }
-
-            .main-footer .copy p{
-                padding: 10px 60px;
-            }
-
-            .main-footer .copy::before{
-            content: "";
-            display: block;
-            width: 90%;
-            height: 1px;
-            background-color: rgb(189, 185, 185);
-            margin: 0 auto;
-            }
-
-    }
     </style>
 </head>
 <body>
@@ -828,15 +573,12 @@
                     <li>
                         <a href="javascript:;">登入</a>
                     </li>
-                </ul>
-                <div class="setting">
-                    <a href="javascript:;">
-                        <picture>
-                            <source media="(max-width:768px)" srcset="img/02/pics_1129/line.png">
+                    <div class="setting">
+                        <a href="javascript:;">
                             <img src="img/02/pics_1129/setting.png" alt="">
-                        </picture>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                </ul>
             </div>
         </div>
     </header>
@@ -860,7 +602,7 @@
                             <option value="taipei">台北</option>
                             <option value="newtaip">新北市</option>
                             <option value="Taoyuan">桃園</option>
-                        </select><input type="text" maxlength="15" placeholder="所有髮型主題"><button type="button"><img src="img/02/pics_1129/icon_searchbar_search.png" alt="">去逛逛</button>
+                        </select><input type="text"><button type="button"><img src="img/02/pics_1129/icon_searchbar_search.png" alt="">去逛逛</button>
                     </div>
                 </form>
             </div>
@@ -930,13 +672,13 @@
                     <a href="javascript:;">
                         <img src="img/02/images/slide1.jpg" alt="">
                     </a>
-                    <p>鬆感的瀏海！配上極捲的捲度！你就是天然捲小帥哥！</p>
+                    <p>鬆感的瀏海！配上極捲的捲度！反而天然捲</p>
                 </div>
                 <div class="topic-items">
                     <a href="javascript:;">
                         <img src="img/02/images/slide2.jpg" alt="">
                     </a>
-                    <p>日系鬆鬆捲度 吹乾即可 霧面髮色 你沒看錯 我就是湊字來的</p>
+                    <p>日系鬆鬆捲度 吹乾即可 霧面髮色 我湊字</p>
                 </div>
                 <div class="topic-items">
                     <a href="javascript:;">
@@ -961,16 +703,12 @@
                     <div class="app-txt">
                         <h2>快速找到好髮型</h2>
                         <div class="app-pic">
-                            <div class="app-ios">
-                                <a href="javaspcript:;">
-                                    <img src="img/02/pics_1129/btn_app_android.png" alt="">
-                                </a>
-                            </div>
-                            <div class="app-android">
-                                <a href="javaspcript:;">
-                                    <img src="img/02/pics_1129/btn_app_ios.png" alt="">
-                                </a>
-                            </div>
+                            <a href="javaspcript:;">
+                                <img src="img/02/pics_1129/btn_app_android.png" alt="">
+                            </a>
+                            <a href="javaspcript:;">
+                                <img src="img/02/pics_1129/btn_app_ios.png" alt="">
+                            </a>
                         </div>
                         <p>下載並註冊後就可以開始發表作品囉！</p>
                     </div>
@@ -991,10 +729,8 @@
                 </div>
                 <div class="bot-more">
                     <h3>優秀設計師募集中</h3>
-                    <div class="apply-btn">
-                        <button type="button">了解更多</button>
-                        <button type="button">立即免費註冊</button>
-                    </div>
+                    <button type="button">了解更多</button>
+                    <button type="button">立即免費註冊</button>
                 </div>
             </div>
 
@@ -1025,7 +761,7 @@
                     </a>
                 </div>
                 <div class="join">
-                    <a href="javascript:;">設計師加入</a>
+                    <span><a href="javascript:;">設計師加入</a></span>
                 </div>
             </div>
 
