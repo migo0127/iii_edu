@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* general */
+a{
+    text-decoration: none;
+    color:#999;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+:root{
+    --mainColor:rgb(212, 94, 118);
+    --whiteColor:#fff;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.object-fit{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.b-sizing{
+    box-sizing: border-box;
+}
+
+.list-unstyled{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* header */
+/* Logo */
+.main-header .header-inner{
+    margin: 20px auto;
+}
+
+.header-inner .logo{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    margin-right: 30px;
+}
+
+.header-inner .logo > a{
+    width: 100%;
+    display: block;
+}
+
+/* header-list */
+.header-inner .header-list{
+    font-size: 1.25rem;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-list .line{
+    width: 45px;
+    height: 45px;
+    /* display: none; */
+    background-color: #bfa;
+}
+
+.header-list .nav-list{
+    flex-grow: 1;
+}
+
+.nav-list > li > a{
+    display: block;
+    padding: 10px 20px;
+}
+
+.login-list > li > a{
+    display: block;
+    padding: 10px 20px;
+}
+
+.nav-list > li > a:hover,
+.login-list > li > a:hover{
+    color:var(--mainColor);
+}
+
+/* setting-pic */
+.header-list .setting-pic{
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.setting-pic .setting_h{
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0;
+}
+
+.header-list .setting-pic:hover .setting{
+    opacity: 0;
+}
+
+.header-list .setting-pic:hover .setting_h{
+    opacity:1;
+}
+
+@media screen and (max-width:768px){
+    .container{
+        width: 100%;
+    }
+
+    .header-inner{
+        position:relative;
+    }
+
+    .header-inner .logo{
+        margin-left: 20px;
+    }
+
+    .header-list{
+        flex-direction: column;
+    }
+
+    .header-list:hover .nav-list,
+    .header-list:hover .login-list{
+        display: block;
+    }
+
+    .header-list .line{
+        align-self: flex-end;
+    }
+
+    .header-list .nav-list{
+        position:absolute;
+        top:55px;
+        left:0;
+        width: 100%;
+        background-color: rgb(0, 0, 0,.8);
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 50px;
+        box-sizing: border-box;
+        padding-top: 20px;
+        display: none;
+    }
+
+    .header-list .nav-list > li{
+        width: 80%;
+        border-bottom:1px solid var(--whiteColor);
+    }
+
+    .header-list .login-list{
+        position: absolute;
+        background-color: rgb(0, 0, 0,.8);
+        top: 213px;
+        left:0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-grow: 1;
+        padding-left: 50px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        display: none;
+    }
+
+    .header-list .login-list > li{
+        width: 80%;
+        border-bottom:1px solid var(--whiteColor);
+    }
+
+    .header-inner .setting-pic{
+        visibility: hidden;
+    }
+
+}
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-inner d-flex">
+            <div class="logo">
+                <a href="#">
+                    <img class="object-fit" src="img/02/pics_1129/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header-list d-flex">
+                <ul class="line list-unstyled">
+                    <li>123</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="nav-list d-flex list-unstyled">
+                    <li>
+                        <a href="javascript:;">找髮型</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;javascript:;">找設計師</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;javascript:;">美髮誌</a>
+                    </li>
+                </ul>
+                <ul class="login-list d-flex list-unstyled">
+                    <li>
+                        <a href="javascript:;javascript:;">註冊</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">登入</a>
+                    </li>
+                </ul>
+                <div class="setting-pic">
+                    <a href="javascript:;">
+                        <img class="object-fit setting" src="img/02/pics_1129/setting.png" alt="">
+                        <img class="object-fit setting_h" src="img/02/pics_1129/setting_h.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>

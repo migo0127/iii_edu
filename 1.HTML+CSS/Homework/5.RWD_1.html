@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairmap 美髮地圖</title>
+    <link rel="stylesheet" href="css/normalise.css">
+    <style>
+
+        /* general */
+        a{
+            text-decoration: none;
+            color:#999;
+        }
+
+        .container{
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        :root{
+            --mainColor:rgb(212, 94, 118);
+        }
+
+        /* hearder */
+        .main-header{
+            padding: 10px 0;
+        }
+
+
+        .main-header .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-header .logo{
+            width: 150px;
+        }
+
+        .main-header .logo a{
+            display: block;
+        }
+
+        .main-header .logo img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-header .left-header{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .main-header .nav-list{
+            list-style: none;
+            display: flex;
+            padding: 0 0 0 40px;
+            margin: 0;
+        }
+
+        .nav-list > li{
+            padding-right: 20px;
+        }
+
+        .right-header{
+            display: flex;
+        }
+
+        .right-header .login{
+            width: 155px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .login > li{
+            padding-left: 20px;
+        }
+
+        .setting{
+            width: 40px;
+            padding-left: 5px;
+        }
+
+        .setting > a {
+            display: block;
+        }
+
+        .setting > a > img{
+            height: 58px;
+            object-fit: contain;
+        }
+
+        /* RWD */
+        @media only screen and (max-width:768px){
+           .container{
+               width: 100%;
+           }
+
+           .main-header .logo{
+               margin-left: 20px;
+           }
+
+           .main-header .left-header,
+           .right-header .login{
+               display: none;
+           }
+
+           .setting picture source{
+              margin-right: -8px;
+           }
+
+        }
+
+        /* article */
+        .main-article > .container{
+            height: 450px;
+            background:url("img/02/images/138974.jpg");
+            background-size: cover;
+        }
+
+        .main-article .txt-wrap{
+            background-color: rgba(0,0,0,.4);
+            height: 270px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+
+        .txt-wrap .t-icon{
+            margin: 0 auto;
+            padding-top: 40px;
+            width: 90px;
+        }
+
+        .txt-wrap .txt h2{
+            color:#fff;
+            margin: 0;
+        }
+
+        .txt-wrap .txt p{
+            color:#fff;
+            margin: 8px 0 25px 0;
+        }
+
+        .txt-wrap .t-icon img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* article-form */
+        .main-article select, input , button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .main-article .form-select{
+            width: 42%;
+            height: 35px;
+            background-color: rgba(0,0,0,.6);
+            border: 2px solid var(--mainColor);
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .form-select img{
+            height: 100%;
+            object-fit: contain;
+            vertical-align: middle;
+            padding: 0 5px;
+        }
+
+        .main-article select{
+            width: 25%;
+            height: 28px;
+            border-right: 2px solid var(--mainColor);
+            background-color: rgba(0,0,0,.1);
+            margin-top: 3px;
+            box-sizing: border-box;
+        }
+
+        .main-article option{
+            color: #000;
+        }
+
+        .form-select input{
+            flex-shrink: 1;
+            padding-left: 5px;
+            /* box-sizing: border-box; */
+        }
+
+        .main-article button{
+            width: 25%;
+            height: 80%;
+            background-color: var(--mainColor);
+            font-size: 16px;
+            padding: 0;
+            margin: 3px 3px;
+        }
+
+        .main-article button > img{
+            height:80%;
+            object-fit: contain;
+            vertical-align: middle;
+            padding: 0;
+        }
+
+        /* article-bottom-pic */
+        .bottom-icon{
+            background-color: rgba(0,0,0,.8);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 24px 0;
+            box-sizing: border-box;
+        }
+
+        .bottom-icon .b-icon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .b-icon > span{
+            color:#fff;
+            width:110px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:768px){
+            .main-article > .container{
+                width: 100%;
+            }
+
+            .main-article .txt-wrap{
+                background-color: rgba(0,0,0,.2);
+                height: 290px;
+            }
+
+            .main-article .form-select{
+                width: 80%;
+                flex-wrap: wrap;
+            }
+
+            .form-select input{
+                /* width: 205px; */
+                width: 60%;
+                padding:0 ;
+                padding-left: 8px;
+                box-sizing: border-box;
+            }
+
+            .main-article button{
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .bottom-icon{
+                background-color: rgba(0,0,0,1);
+                flex-direction: column;
+            }
+
+            .bottom-icon .b-icon{
+                padding: 10px 0;
+                box-sizing: border-box;
+            }
+        }
+
+        /* hot */
+        .hot-wrap > .container{
+            position: relative;
+        }
+        .hot-wrap h2{
+            text-align: center;
+        }
+
+        .hot-wrap h2:after{
+            content:"";
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            position: absolute;
+            top: 32px;
+            left:50%;
+            margin-left: -15px;
+        }
+
+        .hot-pic{
+            display: flex;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .hot-pic .items{
+            width: calc(25% - 20px);
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .items > a > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .items span{
+            display: block;
+            width: 60% ;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            /* padding: 3px 45px; */
+            border: 1px solid pink;
+            background-color: rgba(255,255,255,.7);
+        }
+
+        .items > span{
+            color:var(--mainColor);
+            position: absolute;
+            bottom: 8%;
+            left: 42%;
+        }
+
+        .hot-wrap .hot-more{
+            padding: 3px 10px;
+            background-color: var(--mainColor);
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+            left:88%;
+        }
+
+        .hot-more > a{
+            color:#fff;
+        }
+
+        @media only screen and (max-width:768px){
+            .hot-wrap h2{
+                margin-top: 330px;
+                margin-bottom: 30px;
+            }
+
+            .hot-pic{
+                flex-wrap: wrap;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+
+            .hot-pic .items{
+                width: calc(50% - 20px);
+                margin-bottom: 10px;
+            }
+
+            .hot-wrap h2{
+                color:rgb(131, 128, 128);
+            }
+
+            .hot-wrap .hot-more{
+                top: 0;
+                left:75%;
+            }
+        }
+
+        /* design */
+        .design-wrap{
+            position: relative;
+            display: none;
+        }
+
+        .design-wrap h2{
+            text-align: center;
+            margin-top: 11px;
+        }
+
+        .design-wrap h2:after{
+            content:"";
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            position: absolute;
+            top: 33px;
+            left:50%;
+        }
+
+        .design-pic{
+            display: flex;
+            padding: 6px 40px 0;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .design-pic .design-items{
+            width: calc(25% - 20px);
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .design-avatar{
+            width:120px;
+            height:120px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .design-avatar > a > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .design-items > p{
+            width: 100px;
+            font-size: 14px;
+            text-align: center;
+            color:#fff;
+            text-shadow: 0 0 5px rgba(0,0,0,.8);
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-48%,-50%);
+        }
+
+        .design-items .design-txt{
+            text-align: center;
+        }
+
+        .design-txt p{
+            font-size: 14px;
+            color:rgb(102, 101, 101);
+            margin: 10px 0;
+        }
+
+        .design-wrap .design-more{
+            padding: 3px 10px;
+            background-color: var(--mainColor);
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+            left:88%;
+        }
+
+        .design-more > a{
+            color:#fff;
+        }
+
+        @media only screen and (max-width:768px){
+            .design-wrap{
+            display: block;
+        }
+
+            .design-pic{
+                flex-wrap: wrap;
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+
+            .design-pic .design-items{
+                width: calc(50% - 20px);
+                margin-bottom: 10px;
+            }
+
+            .design-wrap h2{
+                color:rgb(131, 128, 128);
+            }
+
+            .design-wrap .design-more{
+                top: 0;
+                left:75%;
+            }
+        }
+
+        /* topic */
+        .topic-wrap{
+            position: relative;
+        }
+
+        .topic-wrap h2{
+            text-align: center;
+            margin-top: 11px;
+        }
+
+        .topic-wrap h2::after{
+            content:"";
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            position: absolute;
+            top: 33px;
+            left:50%;
+            margin-left: -15px;
+        }
+
+        .topic-pic{
+            display: flex;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .topic-pic .topic-items{
+            width: 280px;
+            margin-right: 20px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .topic-items > a > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .topic-items p{
+            color: #fff;
+            text-shadow: 0 2px 3px #000;
+        }
+
+        .topic-items p{
+            width: 100%;
+            padding:0 5px;
+            box-sizing: border-box;
+            position: absolute;
+            top:50%;
+            margin-top: -8px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .topic-wrap .topic-more{
+            padding: 3px 10px;
+            background-color: var(--mainColor);
+            box-sizing: border-box;
+            position: relative;
+            top: 0;
+            left:88%;
+        }
+
+        .topic-more > a{
+            color:#fff;
+        }
+
+        @media only screen and (max-width:768px){
+            .topic-pic{
+                flex-direction: column;
+            }
+
+            .topic-pic .topic-items{
+                width: 100%;
+                height: 226px;
+                margin-bottom: 10px;
+            }
+
+            .topic-wrap h2{
+                color:rgb(131, 128, 128);
+            }
+
+            .topic-wrap .topic-more{
+                top: 0;
+                left:75%;
+            }
+        }
+
+        /* footer */
+        .main-footer{
+            margin-top: 40px;
+        }
+
+        .main-footer .container{
+            background-color: #eee;
+        }
+
+        .app-wrpa{
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-wrpa .phone{
+            width: 150px;
+        }
+
+        .app-wrpa .phone > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .main-footer .app-txt{
+            position: relative;
+        }
+
+        .app-txt h2{
+            text-align: center;
+        }
+
+        .app-txt h2::after{
+            content: "";
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            position: absolute;
+            top:30px;
+            left:40%;
+        }
+
+        .app-pic{
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-pic > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-txt > p{
+            color:var(--mainColor);
+        }
+
+        /* footer-apply */
+        .main-footer .apply-wrap{
+            width: 100%;
+            background: url(img/02/images/unnamed.jpg);
+            background-size: cover;
+            color: rgba(255,255,255,.8);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .apply-wrap .apply{
+            padding: 10px 180px;
+            box-sizing: border-box;
+        }
+
+        .apply .apply-txt{
+            column-count: 2;
+            column-rule:3px dashed rgba(255,255,255,.7);
+        }
+
+        .apply .apply-txt p{
+            margin: 0;
+        }
+
+
+        .apply-txt p:nth-child(2),
+        .apply-txt p:nth-child(5){
+            font-size: 66px;
+            margin: 5px 0;
+            color: #fff;
+        }
+
+        .apply-wrap .bot-more{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 10;
+            margin-bottom: 15px;
+        }
+
+        .bot-more h3{
+            color:#fff;
+            font-size: 24px;
+            letter-spacing: 5px;
+            margin: 5px 20px 20px 0;
+        }
+
+        .bot-more h3::after{
+            content: "";
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            position: absolute;
+            top:35px;
+            left: 30.5%;
+        }
+
+        .bot-more .apply-btn > button{
+            width: 150px;
+            height: 32px;
+            border: none;
+            background-color:rgb(221, 221, 221,.8);
+            margin: 0 10px 20px 0;
+        }
+
+        /* footer-contact */
+        .main-footer .contact{
+            display: flex;
+            padding-left: 80px;
+            margin-bottom: 40px;
+        }
+
+        .main-footer .info{
+            width: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info .info-pic{
+            width: 50px;
+            height: 40px;
+        }
+
+        .info .info-pic > img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .info p{
+            color: rgb(146, 144, 144);
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 20px 0 10px;
+        }
+
+        .footer-icon{
+            column-count: 2;
+        }
+
+        .footer-icon > a{
+            width: 90px;
+            display: block;
+            font-size: 13px;
+            color: rgb(56, 54, 54);
+            margin-bottom: 5px;
+        }
+
+        .footer-icon > a > img{
+            width: 23%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+
+        .main-footer .join{
+            width: 135px;
+            height: 40px;
+            background: url("img/02/pics_1129/btn_join.png");
+            position: relative;
+        }
+
+        .join  a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            text-align:center;
+            font-size: 14px;
+            color: var(--mainColor);
+            padding-left:30px ;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left:0;
+            /* transform: translate(36%); */
+        }
+
+        /* footer-copy */
+        .main-footer .copy{
+            height: 55px;
+            font-size: 14px;
+            color:rgb(95, 93, 93);
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .main-footer .copy::before{
+            content: "";
+            display: block;
+            width: 800px;
+            height: 1px;
+            background-color: rgb(146, 144, 144);
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width:768px){
+            .main-footer .contact{
+                width: 100%;
+            }
+
+            .app-wrpa{
+                align-items: center;
+            }
+
+            .app-wrpa .phone{
+                width: 40%;
+            }
+
+            .app-wrpa .phone > img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .app-pic{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .app-txt h2::after{
+                top:22%;
+                left:27%;
+            }
+
+            .app-txt  p{
+                display: none;
+            }
+
+            .apply-wrap .apply{
+                padding: 0;
+                margin: 0;
+            }
+
+            .apply .apply-txt{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .apply .apply-txt p{
+                text-align: center;
+                width: 100%;
+                padding-top: 5px;
+                margin: 20px 0;
+            }
+
+            .apply-wrap .bot-more{
+                flex-direction: column;
+            }
+
+            .bot-more h3::after{
+                top:35px;
+                left: 43%;
+            }
+
+            .bot-more .apply-btn{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                margin: 0;
+            }
+
+            .bot-more .apply-btn > button{
+                width: 150px;
+                margin: 0 10px 20px;
+        }
+
+            .main-footer .contact{
+                flex-direction: column;
+                padding:0 10px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+
+            .main-footer .info{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .footer-icon{
+                margin: 10px;
+            }
+
+            .main-footer .join{
+                top:0;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .main-footer .copy p{
+                padding: 5px 50px;
+            }
+
+            .main-footer .copy::before{
+            content: "";
+            display: block;
+            width: 90%;
+            height: 1px;
+            background-color: rgb(189, 185, 185);
+            margin: 0 auto;
+            }
+
+    }
+    </style>
+</head>
+<body>
+    <!-- LOGO導覽區 -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="">
+                    <img src="img/02/pics_1129/logo.png" alt="">
+                </a>
+            </div>
+            <div class="left-header">
+                <ul class="nav-list">
+                    <li>
+                        <a href="javascript:;">找髮型</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;javascript:;">找設計師</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;javascript:;">美髮誌</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-header">
+                <ul class="login">
+                    <li>
+                        <a href="javascript:;javascript:;">註冊</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">登入</a>
+                    </li>
+                </ul>
+                <div class="setting">
+                    <a href="javascript:;">
+                        <picture>
+                            <source media="(max-width:768px)" srcset="img/02/pics_1129/line.png">
+                            <img src="img/02/pics_1129/setting.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主圖區 -->
+    <main class="main-article">
+        <div class="container">
+            <div class="txt-wrap">
+                <div class="t-icon">
+                    <img src="img/02/images/logo_icon_g2.svg" alt="">
+                </div>
+                <div class="txt">
+                    <h2>煩腦髮型嗎</h2>
+                    <p>給你最多髮型靈感及在地優秀設計師</p>
+                </div>
+                <form action="#" method="get" enctype="multipart/form-data" >
+                    <div class="form-select">
+                        <img src="img/02/pics_1129/icon_searchbar_location.png" alt="">
+                        <select>
+                            <option value="area">找地區</option>
+                            <option value="taipei">台北</option>
+                            <option value="newtaip">新北市</option>
+                            <option value="Taoyuan">桃園</option>
+                        </select><input type="text" maxlength="15" placeholder="所有髮型主題"><button type="button"><img src="img/02/pics_1129/icon_searchbar_search.png" alt="">去逛逛</button>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-icon">
+                <div class="b-icon">
+                    <a href="javascript:;">
+                        <img src="img/02/pics_1129/icon_search.png" alt="">
+                    </a>
+                    <span>在地設計師作品輕鬆找</span>
+                </div>
+                <div class="b-icon">
+                    <a href="javascript:;">
+                        <img src="img/02/pics_1129/icon_fashion.png" alt="">
+                    </a>
+                    <span>流行髮型一手掌握</span>
+                </div>
+                <div class="b-icon">
+                    <a href="javascript:;">
+                        <img src="img/02/pics_1129/icon_book.png" alt="">
+                    </a>
+                    <span>即時溝通預約</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 熱門區域 -->
+    <div class="hot-wrap">
+        <div class="container">
+            <h2>熱門主題</h2>
+            <div class="hot-pic">
+                <div class="items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/14366_18.jpg" alt="">
+                    </a>
+                    <span>油頭</span>
+                </div>
+                <div class="items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/9743_2.jpg" alt="">
+                    </a>
+                    <span>灰色系</span>
+                </div>
+                <div class="items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/22736_8.jpg" alt="">
+                    </a>
+                    <span>不知系</span>
+                </div>
+                <div class="items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/3425_14.jpg" alt="">
+                    </a>
+                    <span>大捲</span>
+                </div>
+            </div>
+            <span class="hot-more"><a href="javascript:;">more</a></span>
+        </div>
+    </div>
+
+    <!-- 設計師 -->
+    <div class="design-wrap">
+        <div class="container">
+            <h2>人氣設計師</h2>
+            <div class="design-pic">
+                <div class="design-items">
+                    <div class="design-avatar">
+                        <a href="javascript:;">
+                            <img src="img/02/images/9344.jpg" alt="">
+                        </a>
+                    </div>
+                    <p>Angus怡龍</p>
+                    <div class="design-txt">
+                        <p>40則貼文</p>
+                        <p>65人追蹤</p>
+                    </div>
+                </div>
+                <div class="design-items">
+                    <div class="design-avatar">
+                        <a href="javascript:;">
+                            <img src="img/02/images/128141.jpg" alt="">
+                        </a>
+                    </div>
+                    <p>Ian Chao</p>
+                    <div class="design-txt">
+                        <p>88則貼文</p>
+                        <p>172人追蹤</p>
+                    </div>
+                </div>
+                <div class="design-items">
+                    <div class="design-avatar">
+                        <a href="javascript:;">
+                            <img src="img/02/images/138974.jpg" alt="">
+                        </a>
+                    </div>
+                    <p>阿毛</p>
+                    <div class="design-txt">
+                        <p>33則貼文</p>
+                        <p>87人追蹤</p>
+                    </div>
+                </div>
+                <div class="design-items">
+                    <div class="design-avatar">
+                        <a href="javascript:;">
+                            <img src="img/02/images/141965.jpg" alt="">
+                        </a>
+                    </div>
+                    <p>Ethan Chang</p>
+                    <div class="design-txt">
+                        <p>81則貼文</p>
+                        <p>57人追蹤</p>
+                    </div>
+                </div>
+            </div>
+            <span class="design-more">
+                <a href="javascript:;">more</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- 趨勢話題 -->
+    <div class="topic-wrap">
+        <div class="container">
+            <h2>趨勢話題</h2>
+            <div class="topic-pic">
+                <div class="topic-items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/slide1.jpg" alt="">
+                    </a>
+                    <p>鬆感的瀏海！配上極捲的捲度！你就是天然捲小帥哥！</p>
+                </div>
+                <div class="topic-items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/slide2.jpg" alt="">
+                    </a>
+                    <p>日系鬆鬆捲度 吹乾即可 霧面髮色 你沒看錯 我就是湊字來的</p>
+                </div>
+                <div class="topic-items">
+                    <a href="javascript:;">
+                        <img src="img/02/images/long-hair.jpg" alt="">
+                    </a>
+                    <p>歐巴新寵‧括號瀏海你跟風了嗎？</p>
+                </div>
+            </div>
+            <span class="topic-more"><a href="javascript:;">more</a></span>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer class="main-footer">
+        <div class="container">
+            <!-- app -->
+            <div class="app-wrpa">
+                <div class="phone">
+                    <img src="img/02/images/phones.png" alt="">
+                </div>
+                <div class="app">
+                    <div class="app-txt">
+                        <h2>快速找到好髮型</h2>
+                        <div class="app-pic">
+                            <div class="app-ios">
+                                <a href="javaspcript:;">
+                                    <img src="img/02/pics_1129/btn_app_android.png" alt="">
+                                </a>
+                            </div>
+                            <div class="app-android">
+                                <a href="javaspcript:;">
+                                    <img src="img/02/pics_1129/btn_app_ios.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <p>下載並註冊後就可以開始發表作品囉！</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 募集 -->
+            <div class="apply-wrap">
+                <div class="apply">
+                    <div class="apply-txt">
+                        <p>已有</p>
+                        <p>635</p>
+                        <p>位設計師</p>
+                        <p>發表</p>
+                        <p>6421</p>
+                        <p>張髮型作品</p>
+                    </div>
+                </div>
+                <div class="bot-more">
+                    <h3>優秀設計師募集中</h3>
+                    <div class="apply-btn">
+                        <button type="button">了解更多</button>
+                        <button type="button">立即免費註冊</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 小icon -->
+            <div class="contact">
+                <div class="info">
+                    <div class="info-pic">
+                        <img src="img/02/images/logo_icon_g.svg" alt="">
+                    </div>
+                    <p>HairMap美髮地圖團對致力於打造出最貼心實用的美髮資訊交流社群，讓美髮時光成為每個人生命中的美好時刻。</p>
+                </div>
+                <div class="footer-icon">
+                    <a href="javascript:;">
+                        <img src="img/02/images/email.svg" alt="">
+                        聯絡我們
+                    </a>
+                    <a href="javascript:;">
+                        <img src="img/02/images/facebook_g.svg" alt="">
+                        粉絲專頁
+                    </a>
+                    <a href="javascript:;">
+                        <img src="img/02/images/ios.svg" alt="">
+                        iOS
+                    </a>
+                    <a href="javascript:;">
+                        <img src="img/02/images/android.svg" alt="">
+                        Android
+                    </a>
+                </div>
+                <div class="join">
+                    <a href="javascript:;">設計師加入</a>
+                </div>
+            </div>
+
+            <!-- 聲明 -->
+            <div class="copy">
+                <p>Hairdodo Inc. &copy; 2016. All Rights Reserved 使用者條款與隱私權政策</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
