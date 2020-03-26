@@ -66,8 +66,9 @@ a{
     display: none;
 }
 
-.header-list .nav-list{
+.header-list .nav{
     flex-grow: 1;
+    justify-content: space-between;
 }
 
 .nav-list > li > a{
@@ -113,21 +114,16 @@ a{
     }
 
     .header-inner{
-        position:relative;
+        justify-content: space-between;
     }
 
     .header-inner .logo{
         margin-left: 20px;
     }
-
-    .header-list{
-        height: 40px;
+    .header-inner .header-list{
+        flex-grow: 0;
         flex-direction: column;
-    }
-
-    .header-list:hover .nav-list,
-    .header-list:hover .login-list{
-        display: block;
+        margin-right: 10px;
     }
 
     .header-list .line{
@@ -162,65 +158,44 @@ a{
         left: 0;
     }
 
-
-
-    .header-list .nav-list{
+    .header-list .nav{
         width: 100%;
-        background-color: rgb(0, 0, 0,.9);
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: 15px 0 5px 50px;
-        box-sizing: border-box;
-        position:absolute;
-        top:67px;
-        left:0;
-        display: none;
-    }
-
-    .header-list .nav-list > li{
-        width: 80%;
-        border-bottom:1px solid var(--whiteColor);
-    }
-
-    .header-list .nav-list > li > a{
-        font-size: 1rem;
-        color:rgba(255,255,255,.8);
-    }
-
-    .header-list .nav-list > li:hover a{
-        color: var(--mainColor);
-        background-color: rgba(255,255,255,0.1);
-    }
-
-    .header-list .login-list{
-        width: 100%;
         background-color: rgb(0, 0, 0,.9);
-        flex-direction: column;
-        align-items: flex-start;
-        flex-grow: 1;
-        padding-left: 50px;
-        padding-bottom: 30px;
+        padding:20px 40px 30px;
         box-sizing: border-box;
         position: absolute;
-        top: 202px;
-        left:0;
+        top: 85px;
+        left: 0;
+    }
+
+    .nav .nav-list,
+    .nav  .login-list{
+        width: 100%;
+        flex-direction: column;
         display: none;
     }
 
+    .header-list .nav-list > li,
     .header-list .login-list > li{
-        width: 80%;
+        width: 100%;
         border-bottom:1px solid var(--whiteColor);
     }
 
+    .header-list .nav-list > li > a,
     .header-list .login-list > li > a{
-        font-size: 1rem;
         color:rgba(255,255,255,.8);
     }
 
+    .header-list .nav-list > li:hover a,
     .header-list .login-list > li:hover a{
         color: var(--mainColor);
         background-color: rgba(255,255,255,0.1);
+    }
+
+    .header-list:hover .nav-list,
+    .header-list:hover .login-list{
+        display: block;
     }
 
     .header-inner .setting-pic{
@@ -256,8 +231,6 @@ a{
    color:var(--whiteColor);
    text-align: center;
 }
-
-
 
 .article-txt h1{
     margin: 5px 0 10px;
@@ -321,12 +294,17 @@ a{
     justify-content: center;
     align-items: center;
     background-color: var(--mainColor);
+    cursor: pointer;
     margin-right: 3px;
 }
 
 .form-select > button > img{
     width: 28px;
     height: 28px;
+}
+
+.form-select > button:hover{
+    background-color: rgb(163, 75, 92);
 }
 
 /* article-bottom */
@@ -481,6 +459,10 @@ a{
     color:var(--whiteColor);
 }
 
+.hot-wrap .hot-more:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,.4) ;
+}
+
 @media only screen and (max-width:768px){
     .hot-wrap h2{
         margin-bottom: 30px;
@@ -594,6 +576,10 @@ a{
     color:var(--whiteColor);
 }
 
+.design-wrap .design-more:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,.4) ;
+}
+
 @media only screen and (max-width:768px){
     .design-wrap{
     display: block;
@@ -698,6 +684,10 @@ a{
 
 .topic-more > a{
     color:var(--whiteColor);
+}
+
+.topic-wrap .topic-more:hover{
+    box-shadow: 0 0 5px rgba(0,0,0,.4) ;
 }
 
 @media only screen and (max-width:768px){
@@ -882,7 +872,12 @@ a{
     border-radius: 3px;
     background-color:rgb(221, 221, 221,.8);
     color:rgba(0,0,0,0.8);
+    cursor: pointer;
     margin: 0 10px 20px 0;
+}
+
+.bot-more .apply-btn > button:hover{
+    background-color:rgb(221, 221, 221,1);
 }
 
 /* footer-contact-icon */
