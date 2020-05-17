@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .wrapper{
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "header header header header"
+            "nav nav nav nav"
+            "main main main aside"
+            "footer footer footer footer"
+            ;
+        }
+        header{
+            grid-area: header;
+        }
+        header img{
+            width: 100%;
+        }
+        nav{
+            grid-area: nav;
+        }
+        nav ul{
+            margin: 0;
+        }
+        nav a, nav a:link{
+            text-decoration: none;
+            color:#333;
+            display: block;
+            padding: 10px 20px;
+            position: relative;
+        }
+        nav a:hover{
+            
+        }
+        nav li.active{
+            font-weight: bold;
+            color:rgb(129, 18, 18);
+        }
+        nav a:hover::after, nav li.active a::after{
+            content: "";
+            position: absolute;
+            bottom:0;
+            left: 16px;
+            right: 16px;
+            height: 4px;
+            background: red;
+        }
+        main{
+            grid-area: main;
+            margin-right: 20px;
+        }
+        aside{
+            grid-area: aside;
+
+        }
+        footer{
+            grid-area: footer;
+            padding: 20px;
+            text-align: center;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .list-unstyled{
+            list-style: none;
+            padding:0;
+        }
+        @media screen and (max-width: 576px){
+            .wrapper{
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                "nav"
+                "main"
+                "aside"
+                "footer"
+                ;
+            }
+            
+            main{
+                margin: 0;
+                padding: 0 20px;
+            }
+            nav li{
+                flex: 1 0 0;
+                text-align: center;
+            }
+            nav li a, nav li a:link{
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="images/banner.jpg" alt="">
+        </header>
+        <nav>
+            <ul class="list-unstyled d-flex">
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>仙台</h1>
+        
+            <article>
+                <p>仙台市（日語：仙台市／せんだいし Sendai shi */?）是日本宮城縣縣治，位於宮城縣中部，為政令指定都市，同時也是東北地方最大的城市。該市得名於古稱千代城的古城「仙台城」，於1600年由安土桃山時代名將伊達政宗擴建並改名為同音的仙台。由於全市綠化比例高，而有「杜之都」（森林之都）之譽。</p>
+                <p>仙台藩主伊達政宗最早在此建城，奠定了現在仙台市的市街基礎。伊達政宗自1600年開始築城，之後不斷推行新計畫，進行城建設計和開發等。當時的仙台非常繁榮，西班牙的使節形容當時的情形為—東西南北人來人往，勝似江戶（現在的東京）。</p>
+            </article>
+        </main>
+        <aside>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d801429.7684295895!2d140.20571584804293!3d38.31228111315843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2aee30cd55d3%3A0xba2579e0b846b1ee!2z5pel5pys5a6u5Z-O57ij5LuZ5Y-w5biC!5e0!3m2!1szh-TW!2stw!4v1584603335620!5m2!1szh-TW!2stw" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </aside>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

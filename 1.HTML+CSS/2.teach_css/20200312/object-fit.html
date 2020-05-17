@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #aaa;
+            margin: 10px;
+            float: left;
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+        }
+        .fill{
+            object-fit: fill;
+        }
+        .contain{
+            object-fit: contain;
+        }
+        .cover{
+            object-fit: cover;
+            /* object-position: left top; */
+        }
+        .none{
+            object-fit: none;
+            /* object-position: left top; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img class="fill" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="contain" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="cover" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="none" src="images/dr_strange.jpg" alt="">
+    </div>
+</body>
+</html>

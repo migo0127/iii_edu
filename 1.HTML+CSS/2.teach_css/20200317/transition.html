@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background: lightcoral;
+            transition: background .5s, width 1s .5s, border-radius .5s 1.5s;
+            /* transition: .5s ease; */
+            /* transition-delay: .5s; */
+            margin: 10px;
+        }
+
+        .wrapper:hover .box {
+            background: red;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .ease {
+            transition-timing-function: ease;
+        }
+
+        .linear {
+            transition-timing-function: linear;
+        }
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+        .cubic-bezier {
+            transition-timing-function: cubic-bezier(0,-0.85,.84,1.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box ease"></div>
+        <div class="box linear"></div>
+        <div class="box ease-in"></div>
+        <div class="box ease-out"></div>
+        <div class="box cubic-bezier"></div>
+
+    </div>
+</body>
+
+</html>

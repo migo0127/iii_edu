@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        a, a:link{
+            color: #3c5a9c;
+            text-decoration: none;
+        }
+        body {
+            background: #eee;
+        }
+        .logo{
+            height: 48px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .cover-fit{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .justify-content-between{
+            justify-content: space-between;
+        }
+        .list-unstyled{
+            list-style: none;
+            padding:0;
+        }
+        .main-header {
+            background: #fff;
+            padding:10px 0;
+        }
+        .main-menu{
+            background: #3c5a9c;
+            margin-bottom:20px;
+        }
+        .main-menu a{
+            display: block;
+            color:#fff;
+            padding: 10px 16px;
+        }
+        .active{
+            /* border:1px solid red; */
+        }
+        .main-menu a:hover, .main-menu li.active a{
+            background: #273c69;
+        }
+        @media screen and (max-width: 768px){
+            .main-menu ul li{
+                /* flex-grow: 1; */
+                text-align: center;
+                flex: 1 0 0;
+            }
+            .main-menu a{
+                padding: 10px 0;
+            }
+        }
+        .main{
+            min-height: calc(100vh - 200px);
+        }
+        .left-aside, .right-aside{
+            width: 200px;
+        }
+        .right-aside img{
+            max-width: 100%;
+        }
+        .left-aside figure{
+            width: 200px;
+            height: 200px;
+            border:1px solid #ccc;
+            margin:0;
+            padding:0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .side-menu a{
+            display: block;
+            padding: 10px 20px 10px 16px;
+            border-left: 4px solid transparent;
+
+        }
+        .side-menu a:hover, .side-menu li.active a{
+            border-left: 4px solid #3c5a9c;
+            background: #fff;
+        }
+        .main-content{
+            border: 1px solid #ccc;
+            background: #fff;
+            margin: 0 20px;
+            padding:20px;
+            flex-grow: 1;
+            align-self: flex-start;
+        }
+        article.d-flex{
+            flex-direction: column;
+        }
+        @media screen and (max-width: 768px){
+            .main{
+                flex-wrap: wrap;
+            }
+            .left-aside, .right-aside{
+                width: 100%;
+            }
+            .left-aside figure{
+                margin: 0 auto;
+            }
+            .side-menu{
+                display: flex;
+            }
+            .side-menu li{
+                flex: 1 0 0;
+                text-align: center;
+            }
+            .side-menu a{
+                border-left: none;
+                border-bottom: 4px solid transparent;
+            }
+            .side-menu a:hover, .side-menu li.active a{
+                border-left: none;
+                border-bottom: 4px solid #3c5a9c;
+            }
+            .right-aside img{
+                display: none;
+            }
+            .map{
+                order: 2;
+            }
+        }
+        footer{
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container d-flex justify-content-between">
+            <img class="logo" src="images/facebook.png" alt="">
+            <div>
+                <a href="">Log in</a> | <a href="">Sign up</a>
+            </div>
+        </div>
+    </header>
+    <nav class="main-menu">
+        <ul class="container list-unstyled d-flex">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    <div class="container d-flex main">
+        <aside class="left-aside">
+            <figure>
+                <img class="cover-fit" src="images/logo.jpg" alt="">
+            </figure>
+            <ul class="list-unstyled side-menu">
+                <li class="active"><a href="">Home</a></li>
+                <li ><a href="">About</a></li>
+                <li><a href="">Album</a></li>
+                <li><a href="">Film</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <article class="d-flex">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0318376784444!2d121.54140811549799!3d25.032993583972864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd3702839e1%3A0x1ec4809041d20108!2z5aSn5a6J56uZ!5e0!3m2!1szh-TW!2stw!4v1584515967472!5m2!1szh-TW!2stw" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <h1>Title</h1>
+                <div><time>2020/3/18</time></div>
+                <p>123</p>
+            </article>
+        </main>
+        <aside class="right-aside">
+            <img src="images/jk.png" alt="">
+        </aside>
+    </div>
+    <footer>
+        footer
+    </footer>
+</body>
+
+</html>

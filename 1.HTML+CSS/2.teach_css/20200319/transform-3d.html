@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+        .wrapper{
+            display: flex;
+        }
+        .box{
+            perspective: 500px;
+            margin: 10px;
+        }
+        img{
+            width: 220px;
+            transition: .5s;
+        }
+        .translate:hover img{
+            transform: translateZ(200px);
+        }
+        .rotate{
+            /* perspective-origin: left top; */
+        }
+        .rotate:hover img{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box translate">
+            <img class="" src="images/dr_strange.jpg" alt="">
+        </div>
+        <div class="box rotate">
+            <img class="" src="images/dr_strange.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

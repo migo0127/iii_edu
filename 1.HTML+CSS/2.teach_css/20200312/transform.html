@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box-wrap{
+            width: 200px;
+            height: 200px;
+            background: #eee;
+            float: left;
+            margin: 10px;
+        }
+        .box-wrap .box{
+            margin:0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: lightcoral;
+            transition: .5s;
+            margin: 10px;
+            float: left;
+            transform-origin: left top;
+        }
+        .translateX:hover{
+            transform: translateX(50px);
+        }
+        .translateY:hover{
+            transform: translateY(20px);
+        }
+        .translate:hover{
+            transform: translate(20px, 30px);
+        }
+        .rotate:hover{
+            transform: rotate(180deg);
+        }
+        .scale:hover{
+            transform: scale(0.2);
+        }
+        .wrap-scale:hover .box{
+            transform: scale(0.2);
+        }
+        .wrap-scale2 .box{
+            transform: scale(0);
+        }
+        .wrap-scale2:hover .box{
+            transform: scale(1);
+        }
+        .wrap-translate{
+            overflow: hidden;
+        }
+        .wrap-translate .box{
+            transform: translateY(-200px);
+        }
+        .wrap-translate:hover .box{
+            transform: translateY(0px);
+        }
+        .wrap-transform .box{
+            transform: translate(-200px, -200px) rotate(0);
+        }
+        .wrap-transform:hover .box{
+            transform: translate(0px, 0px) rotate(360deg);
+            /* transform: translate(0px, 0px);
+            transform: rotate(360deg); */
+        }
+        .skew:hover{
+            transform: skew(15deg);
+        }
+        .matrix:hover{
+            transform: matrix(0.9,1.2,1.2,1,20,20);
+        }
+    </style>
+</head>
+<body>
+    <div class="box translateX">translateX</div>
+    <div class="box translateY">translateY</div>
+    <div class="box translate">translate</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="box-wrap wrap-scale">
+        <div class="box"></div>
+    </div>
+    <div class="box-wrap wrap-scale2">
+        <div class="box"></div>
+    </div>
+    <div class="box-wrap wrap-translate">
+        <div class="box"></div>
+    </div>
+    <div class="box-wrap wrap-transform">
+        <div class="box"></div>
+    </div>
+    <div class="box skew">skew</div>
+    <div class="box matrix">matrix</div>
+
+</body>
+</html>

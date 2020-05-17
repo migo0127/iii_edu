@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        img{
+            width: 220px;
+            transition: .5s;
+        }
+        .blur:hover{
+            filter: blur(10px);
+        }
+        .brightness:hover{
+            filter: brightness(300%);
+        }
+        .contrast:hover{
+            filter: contrast(300%);
+        }
+        .grayscale:hover{
+            filter: grayscale(100%);
+        }
+        .hue-rotate:hover{
+            filter: hue-rotate(720deg);
+        }
+        .invert:hover{
+            filter: invert(100%);
+        }
+        .filter:hover{
+            filter: saturate(200%) brightness(300%);
+        }
+        .drop-shadow:hover{
+            filter: drop-shadow(0 5px 5px #000);
+        }
+        .box-shadow:hover{
+            box-shadow: 0 5px 5px #000;
+        }
+    </style>
+</head>
+<body>
+    <img class="blur" src="images/dr_strange.jpg" alt="">
+    <img class="brightness" src="images/dr_strange.jpg" alt="">
+    <img class="contrast" src="images/dr_strange.jpg" alt="">
+    <img class="drop-shadow" src="images/dr_strange.jpg" alt="">
+    <img class="grayscale" src="images/dr_strange.jpg" alt="">
+    <img class="hue-rotate" src="images/dr_strange.jpg" alt="">
+    <img class="invert" src="images/dr_strange.jpg" alt="">
+    <img class="filter" src="images/dr_strange.jpg" alt="">
+    <img class="box-shadow" src="images/dr_strange.jpg" alt="">
+    <img class="box-shadow" src="images/picture.svg" alt="">
+    <img class="drop-shadow" src="images/picture.svg" alt="">
+</body>
+</html>

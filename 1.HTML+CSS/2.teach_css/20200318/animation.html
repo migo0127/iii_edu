@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes changeColor {
+            from{
+                background: lightcoral;
+            }
+            to{
+                background: red;
+            }
+        }
+        @keyframes changeColor2 {
+            0%{
+                background: lightcoral;
+            }
+            33%{
+                background: lightpink;
+                /* width: 300px; */
+            }
+            66%{
+                background: rgb(224, 35, 145);
+                /* width: 200px; */
+            }
+            100%{
+                background: red;
+            }
+        }
+        @keyframes changeLength{
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 400px;
+            }
+            100%{
+                width: 200px;
+            }
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background: lightcoral;
+            /* animation-name: changeColor2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(.19,-0.36,.77,1.41); */
+            /* animation-delay: 1s; */
+            animation: changeColor2 2s infinite alternate both , changeLength 1s infinite steps(3);
+        }
+        .box:hover{
+            animation-play-state: paused;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

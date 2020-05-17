@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5f</title>
+    <style>
+        body{
+            background: #ccc;
+        }
+        ul{
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+        .wrapper{
+            max-width: 960px;
+            margin:20px auto;
+        }
+        .menu{
+            background: #fff;
+            display: flex;
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+        .menu li{
+            position: relative;
+        }
+        .menu li a{
+            color:#333;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .menu li a:hover{
+            background: lightblue;
+        }
+        .submenu{
+            position: absolute;
+            background: #fff;
+            opacity: 0;
+            transition: .5s;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .menu li:hover .submenu{
+            opacity: 1;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Shop</a>
+                <ul class="submenu">
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">Children</a></li>
+                    <li><a href="">Shoes</a></li>
+                </ul>
+            </li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </p>
+</body>
+</html>

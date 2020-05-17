@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth</title>
+    <style>
+        body{
+            background: url(images/space-bg.jpg);
+        }
+        @keyframes rotate {
+            from{
+                background-position: left top;
+            }
+            to{
+                background-position: -500px top;
+
+            }
+        }
+        .earch{
+            margin: 20px auto;
+            width: 281px;
+            height: 281px;
+            background: url(images/earth2.jpg);
+            border-radius: 50%;
+            box-shadow: 0 0 50px rgb(7, 141, 194), 0 0 40px #000 inset;
+            animation: rotate 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="earch">
+
+    </div>
+</body>
+</html>
